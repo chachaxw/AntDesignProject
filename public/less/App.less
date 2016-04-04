@@ -1,11 +1,40 @@
 /* created by chacha */
 
 body {
-  background: #f4f4f4;
+    background: #f4f4f4;
 }
 
 @font-color-E8: #E8E8E8;
 @bg-color-34: #343434;
+@theme-color-blue: #1573C6;
+@bg-color-blue: #c2def2;
+
+
+/* 页面加载进入动画 */
+.ant-progress-circle-wrap {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background: @bg-color-blue;
+    .ant-progress-circle-inner {
+        top: 50%;
+        margin: 0 auto;
+        -webkit-transform : translateY(-50%);
+        transform: translateY(-50%);
+    }
+    .rc-progress-circle-trail,
+    .rc-progress-circle-path {
+        stroke-width: 4px;
+    }
+    .rc-progress-circle-path {
+        stroke: @theme-color-blue;
+    }
+    .ant-progress-circle-text {
+        color: white;
+    }
+}
+
 
 /* 导航菜单组件样式 */
 .nav-bar {
@@ -86,14 +115,21 @@ body {
     }
 }
 
-
 .nav-menu,
 .footer-nav {
     a { 
         color: @font-color-E8;
         &:hover,
         &.nav-active {
-            color: #1573C6;
+            color: @theme-color-blue;
         }
     }
 }
+
+
+/* Banner图片样式 */
+.banner-img{
+    
+}
+
+

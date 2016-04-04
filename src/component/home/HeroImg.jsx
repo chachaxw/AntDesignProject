@@ -2,11 +2,16 @@ import React from "react";
 import ReactDOM from 'react-dom';
 import Content from "../common/Content";
 
-const HeroImg = React.createClass ({
+const BannerImg = React.createClass ({
     render: function() {
-        
-
+        return (
+            <div className="banner-img-box">
+                <div>
+                    
+                </div>
+            </div>
+        )
     }
 })
 
-export default HeroImg;
+export default BannerImg;
