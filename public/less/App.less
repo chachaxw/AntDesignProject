@@ -1,33 +1,99 @@
+/* created by chacha */
 
 body {
   background: #f4f4f4;
 }
 
+@font-color-E8: #E8E8E8;
+@bg-color-34: #343434;
+
 /* 导航菜单组件样式 */
 .nav-bar {
     height: 60px;
-    line-height: 60px;
-    background: #343434;
-    .nav-logo img {
-        margin-top: 13px;
-        margin-left: 100px;
-        width: 138px;
-        height: 34px;
+    background: @bg-color-34;
+    .nav-logo {
+        height: 60px;
+        overflow: hidden;
+        a {
+            display: inline-block;
+            margin-top: 13px;
+            margin-left: 10%;
+            font-size: 0;
+        }
+        img {
+            width: 138px;
+            height: 34px;
+        }
     }
     .nav-menu {
-        float: right;
-        margin-right: 50px;
+        ul{
+            float: right;
+            margin-right: 10%;
+            line-height: 60px;
+        }
         li {
             float: left;
             font-size: 16px;
             margin-right: 50px;
-        }
-        a { 
-            color: #E8E8E8;
-            &:hover,
-            &.nav-active {
-                color: #1573C6;
+            &:last-child{
+                margin-right: 0;
             }
+        }
+    }
+}
+
+
+/* 页脚组件样式 */
+.footer {
+    height: 200px;
+    background: @bg-color-34;
+    text-align: center;
+    overflow: hidden;
+    ul {
+        display: inline-block;
+        line-height: 1;
+    }
+    .footer-logo {
+        margin-top: 20px;
+    }
+    .footer-nav {
+        margin-top: 30px;
+        li{
+            float: left;
+            margin-right: 50px;
+            font-size: 16px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    .footer-social-icon {
+        li{
+            float: left;
+            margin-right: 40px;
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+        .iconfont {  
+            font-size: 44px;
+            color: black;
+        }
+    }
+    .footer-social-icon,
+    .footer-info {
+        margin-top: 10px;
+    }
+}
+
+
+.nav-menu,
+.footer-nav {
+    a { 
+        color: @font-color-E8;
+        &:hover,
+        &.nav-active {
+            color: #1573C6;
         }
     }
 }
