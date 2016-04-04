@@ -5,5 +5,12 @@ import Footer from '../component/common/Footer';
 import ReactDOM from 'react-dom';
 import React from 'react';
 
+const mountNode = document.getElementById('react-content');
 
-ReactDOM.render(<Footer />, document.getElementById('react-content'));
+ReactDOM.render(
+    <div>
+        <NavBar />
+        <Content />
+        <Footer />
+    </div>,
+mountNode);
