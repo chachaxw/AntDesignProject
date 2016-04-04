@@ -1,6 +1,8 @@
 import '../common/lib';
-import App from '../component/App';
+import NavBar from '../component/common/NavBar';
 import ReactDOM from 'react-dom';
 import React from 'react';
 
-ReactDOM.render(<App />, document.getElementById('react-content'));
+ReactDOM.render(<NavBar />, document.getElementById('react-content'));
+
+

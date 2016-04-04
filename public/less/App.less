@@ -1,0 +1,33 @@
+
+body {
+  background: #f4f4f4;
+}
+
+/* 导航菜单组件样式 */
+.nav-bar {
+    height: 60px;
+    line-height: 60px;
+    background: #343434;
+    .nav-logo img {
+        margin-top: 13px;
+        margin-left: 100px;
+        width: 138px;
+        height: 34px;
+    }
+    .nav-menu {
+        float: right;
+        margin-right: 50px;
+        li {
+            float: left;
+            font-size: 16px;
+            margin-right: 50px;
+        }
+        a { 
+            color: #E8E8E8;
+            &:hover,
+            &.nav-active {
+                color: #1573C6;
+            }
+        }
+    }
+}

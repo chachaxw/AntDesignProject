@@ -1,7 +1,10 @@
 {
   "name": "antd-project",
-  "author": "chacha",
-  "email": "867571123@qq.com",
+  "author": {
+    "name": "chacha",
+    "email": "867571123@qq.com",
+    "github": "https://github.com/chachaxw"
+  },
   "version": "1.0.0",
   "private": true,
   "entry": {
@@ -12,6 +15,7 @@
     "atool-build": "0.6.x",
     "babel-plugin-antd": "0.2.x",
     "es3ify-loader": "^0.1.0",
+    "public": "^0.1.2",
     "react": "0.14.x",
     "react-dom": "0.14.x"
   },
