@@ -4,6 +4,7 @@ body {
     background: #f4f4f4;
 }
 
+/* 颜色主题 */
 @font-color-E8: #E8E8E8;
 @bg-color-34: #343434;
 @theme-color-blue: #1573C6;
@@ -135,4 +136,62 @@ body {
     background-size: cover;
 }
 
+
+/* 按钮样式 */
+.rect-button {
+    display: inline-block;
+    width: 140px;
+    line-height: 50px;
+    text-align: center;
+    background: @theme-color-blue;
+    opacity: 0.75;
+    font-size: 16px;
+    color: white;
+    transition: all .3s;
+    &:hover{
+        opacity: 1;
+        color: white;
+    }
+}
+
+
+/* 首页关于样式 */
+.home-about {
+    height: 620px;
+    background: white;
+    text-align: center;
+    .about-user-head {
+        display: inline-block;
+        margin-top: 88px;
+        width: 300px;
+        height: 300px;
+        img{
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+        }
+    }
+    .about-content {
+        max-width: 550px;
+        margin: 20px auto;
+        h1 {
+            font-size: 24px;
+        }
+        h2,
+        p {
+            font-size: 16px;
+        }
+        p {
+            font-weight: 200;
+            padding: 0 20px;
+        }
+    }
+}
+
+
+/* 首页更多关于 */
+.more-info {
+    background: @theme-color-blue;
+    height: 300px;
+}
 

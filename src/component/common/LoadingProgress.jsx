@@ -6,7 +6,7 @@ const ProgressCircle = Progress.Circle;
 
 const LoadingProgress = React.createClass({
     getInitialState: function() {
-        return {percent: 60};
+        return {percent: 0};
     },
 
     loading: function() {
@@ -14,7 +14,7 @@ const LoadingProgress = React.createClass({
     },
 
     componentDidMount: function() {
-        //this.interval = setInterval(this.loading, 100);
+/*        this.interval = setInterval(this.loading, 100);*/
     },
 
     componentWillMount: function() {
