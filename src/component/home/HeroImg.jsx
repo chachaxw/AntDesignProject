@@ -1,15 +1,15 @@
 import React from "react";
 import ReactDOM from 'react-dom';
-import Content from "../common/Content";
 
 const BannerImg = React.createClass ({
+
+    getInitialState: function() {
+        return {backgroundImage: "url(public/images/banner-img.jpg)"}
+    },
+
     render: function() {
         return (
-            <div className="banner-img-box">
-                <div>
-                    
-                </div>
-            </div>
+            <div className="banner-img-box" style={{backgroundImage: this.state.backgroundImage}}></div>
         )
     }
 })
