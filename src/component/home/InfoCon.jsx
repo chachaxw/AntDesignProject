@@ -16,7 +16,7 @@ const InfoContent = React.createClass({
                 </Button>
                 <p>
                     or go to
-                    <a href="" target="_blank">about</a>
+                    <a href="" target="_blank">About</a>
                 </p>
             </div>
         )

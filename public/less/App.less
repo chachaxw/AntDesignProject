@@ -4,11 +4,17 @@ body {
     background: #f4f4f4;
 }
 
+p {
+    text-align: center;
+    font-weight: 200;
+}
+
 /* 颜色主题 */
 @font-color-E8: #E8E8E8;
 @bg-color-34: #343434;
-@theme-color-blue: #1573C6;
+@bg-color-F2: #F2F2F2;
 @bg-color-blue: #c2def2;
+@theme-color-blue: #1573C6;
 
 
 /* 页面加载进入动画 */
@@ -128,12 +134,60 @@ body {
 }
 
 
+/* 我的作品组件样式 */
+.portfolio-box {
+    max-width: 1180px;
+    height: auto;
+    margin: 0 auto;
+    padding-bottom: 80px;
+    overflow: hidden;
+    background: @bg-color-F2;
+    h1 {
+        margin: 50px;
+        text-align: center;
+        font-size: 24px;
+    }
+    .portfolio-item {
+        margin: 0 22px;
+        height: 410px;
+        transition: all .3s ease-in-out;
+        &:hover {
+            box-shadow: 0 5px 35px rgba(52,52,52,0.5);
+        }
+        .portfolio-img {
+            width: 100%;
+            height: 250px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .portfolio-desc {
+            height: 160px;
+            padding: 15px;
+            background: white;
+        }
+        h2 {
+            font-size: 18px;
+            font-weight: 200;
+        }
+        p {
+            margin-top: 10px;
+            font-size: 14px;
+            text-align: left;
+        }
+    }
+}
+
+
 /* Banner图片样式 */
 .banner-img-box {
     height: 600px;
     width: 100%;
     background: no-repeat center;
     background-size: cover;
+    overflow: hidden;
 }
 
 
@@ -156,7 +210,32 @@ body {
 
 
 /* 首页banner样式 */
-
+.banner-img-box {
+    p {
+        max-width: 300px;
+        margin: 10px auto;
+        font-size: 16px;
+        color: white;
+    }
+    .banner-logo {
+        max-width: 380px;
+        margin: 140px auto;
+        margin-bottom: 0;
+    }
+    .banner-buttons {
+        max-width: 380px;
+        margin: 30px auto;
+    }
+    .rect-button {
+        margin-right: 100px;
+        &:first-child {
+            background: @bg-color-34;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
 
 /* 首页关于样式 */
 .home-about {
@@ -201,7 +280,10 @@ body {
     overflow: hidden;
     p {
         font-size: 16px;
-        margin-top: 44px;
+        margin-top: 76px;
+        &:last-child {
+            margin-top: 15px;
+        }
     }
     a {
         margin-left: 6px;
