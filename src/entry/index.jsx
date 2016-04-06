@@ -16,6 +16,7 @@ ReactDOM.render(
     <div>
         <NavBar />
         <Content>
+            <LoadingProgress />
             <HomeBanner />
             <HomeAbout />
             <MoreInfo>

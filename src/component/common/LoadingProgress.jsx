@@ -10,11 +10,11 @@ const LoadingProgress = React.createClass({
     },
 
     loading: function() {
-         this.setState({percent: this.state.percent + 1});
+         this.setState(this.state.percent + 1);
     },
 
     componentDidMount: function() {
-/*        this.interval = setInterval(this.loading, 100);*/
+        //this.interval = setInterval(this.loading, 200);
     },
 
     componentWillMount: function() {
@@ -23,7 +23,7 @@ const LoadingProgress = React.createClass({
 
     render: function() {
         return (
-            <ProgressCircle percent={this.state.percent}/>
+            <ProgressCircle percent={this.state.percent} />
         )
     }
 })
