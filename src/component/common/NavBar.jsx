@@ -18,7 +18,7 @@ const NavBar = React.createClass({
                             <li><a href="" className="nav-active">Home</a></li>
                             <li><a href="">About</a></li>
                             <li><a href="">Portfolio</a></li>
-                            <li><a href="">Github</a></li>
+                            <li><a href="http://github.com/chachaxw" target="_blank">Github</a></li>
                         </ul>
                     </Col>
                 </Row>

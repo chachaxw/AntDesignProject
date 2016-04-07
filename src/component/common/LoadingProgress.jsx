@@ -10,15 +10,17 @@ const LoadingProgress = React.createClass({
     },
 
     loading: function() {
-         this.setState(this.state.percent + 1);
+         this.setState({percent: this.state.percent + 1});
     },
 
     componentDidMount: function() {
         //this.interval = setInterval(this.loading, 200);
     },
 
-    componentWillMount: function() {
-
+    componentWillUnMount: function() {
+        if( this.state.percent == 100 ) {
+            clearInterval(this.interval);
+        }
     },
 
     render: function() {

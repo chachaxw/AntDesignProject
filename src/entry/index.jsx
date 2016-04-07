@@ -26,4 +26,4 @@ ReactDOM.render(
         </Content>
         <Footer />
     </div>,
-document.getElementById('react-content'));
+mountNode);

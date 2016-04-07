@@ -136,9 +136,7 @@ p {
 
 /* 我的作品组件样式 */
 .portfolio-box {
-    max-width: 1180px;
     height: auto;
-    margin: 0 auto;
     padding-bottom: 80px;
     overflow: hidden;
     background: @bg-color-F2;
@@ -147,9 +145,14 @@ p {
         text-align: center;
         font-size: 24px;
     }
+    .row {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
     .portfolio-item {
-        margin: 0 22px;
+        margin: 0 auto;
         height: 410px;
+        max-width: 300px;
         transition: all .3s ease-in-out;
         &:hover {
             box-shadow: 0 5px 35px rgba(52,52,52,0.5);

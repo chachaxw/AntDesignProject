@@ -9,11 +9,7 @@ const HomePortfolio = React.createClass ({
                 <h1>
                     My Portfolio
                 </h1>
-                <Row>
-                    <Col span="6">
-                        <PortfolioItem />
-                    </Col>
-                </Row>
+                <PortfolioItem />
             </div>
         )
     }
