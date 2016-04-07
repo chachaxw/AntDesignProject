@@ -122,6 +122,25 @@ p {
     }
 }
 
+/* 页脚tips组件样式 */
+.tips-box {
+    width: 280px;
+    height: 160px;
+    background: black;
+    padding: 15px;
+    box-shadow: 0 0 20px @bg-color-34;
+    &:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        margin-left: -5px;
+        border-top: 15px @bg-color-34 solid;
+        border-left: 10px transparent solid;
+        border-right: 10px transparent solid;
+        border-bottom: 10px transparent solid;
+    }
+}
+
 .nav-menu,
 .footer-nav {
     a { 

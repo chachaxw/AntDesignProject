@@ -3,6 +3,25 @@ import { Row, Col } from 'antd';
 import '../../../public/less/App.less';
 import '../../../public/less/IconFont.less';
 
+const SocialTips = React.createClass ({
+    getInitialState: function() {
+        return {src: ""}
+    },
+
+    render: function() {
+        return (
+            <div className="tips-box">
+                <div className="tips-img">
+                    <img src={this.state.src}/>
+                </div>
+                <div className="tips-info">
+                    {this.props.info}
+                </div>
+            </div>
+        )
+    }
+});
+
 const Footer = React.createClass ({
     render: function() {
         return (

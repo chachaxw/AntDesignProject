@@ -14,19 +14,24 @@ const LoadingProgress = React.createClass({
     },
 
     componentDidMount: function() {
-        //this.interval = setInterval(this.loading, 200);
+        this.interval = setInterval(this.loading, 100);
     },
 
     componentWillUnMount: function() {
-        if( this.state.percent == 100 ) {
-            clearInterval(this.interval);
-        }
+        
     },
 
     render: function() {
-        return (
-            <ProgressCircle percent={this.state.percent} />
-        )
+
+        if( this.state.percent >= 100 ) {
+            clearInterval(this.interval);
+            return null;
+        }else{
+            return (
+                <ProgressCircle percent={this.state.percent} />
+            )
+        }   
+        
     }
 })
 
