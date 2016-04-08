@@ -13,17 +13,24 @@ import LoadingProgress from '../component/common/LoadingProgress';
 
 const mountNode = document.getElementById('react-content');
 
-ReactDOM.render(
-    <div>
-        <NavBar />
-        <Content>
-            <HomeBanner />
-            <HomeAbout />
-            <MoreInfo>
-                <InfoContent />
-            </MoreInfo>
-            <HomePortfolio />
-        </Content>
-        <Footer />
-    </div>,
-mountNode);
+const IndexPage = React.createClass({
+    render: function() {
+        return (
+            <div>
+                <LoadingProgress />
+                <NavBar />
+                <Content>
+                    <HomeBanner />
+                    <HomeAbout />
+                    <MoreInfo>
+                        <InfoContent />
+                    </MoreInfo>
+                    <HomePortfolio />
+                </Content>
+                <Footer />
+            </div>
+        )
+    }
+});
+
+ReactDOM.render(<IndexPage />, mountNode);
