@@ -4,17 +4,17 @@ body {
     background: #f4f4f4;
 }
 
-p {
-    text-align: center;
-    font-weight: 200;
-}
-
 /* 颜色主题 */
 @font-color-E8: #E8E8E8;
+@font-color-81: #818181;;
 @bg-color-34: #343434;
 @bg-color-F2: #F2F2F2;
 @bg-color-blue: #c2def2;
 @theme-color-blue: #1573C6;
+
+p {
+    text-align: center;
+}
 
 
 /* 页面加载进入动画 */
@@ -172,7 +172,8 @@ p {
         margin: 0 auto;
         height: 410px;
         max-width: 300px;
-        transition: all .3s ease-in-out;
+        min-width: 250px;
+        transition: all 0.3s cubic-bezier(.68,-0.55,.27,1.55);
         &:hover {
             box-shadow: 0 5px 35px rgba(52,52,52,0.5);
         }
@@ -190,14 +191,17 @@ p {
             padding: 15px;
             background: white;
         }
+        a {
+            color: @bg-color-34;
+        }
         h2 {
             font-size: 18px;
-            font-weight: 200;
         }
         p {
             margin-top: 10px;
             font-size: 14px;
             text-align: left;
+            color: @font-color-81;
         }
     }
 }
@@ -286,8 +290,8 @@ p {
             font-size: 16px;
         }
         p {
-            font-weight: 200;
             padding: 0 20px;
+            color: @font-color-81;
         }
     }
 }

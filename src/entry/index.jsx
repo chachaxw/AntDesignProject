@@ -17,7 +17,6 @@ const IndexPage = React.createClass({
     render: function() {
         return (
             <div>
-                <LoadingProgress />
                 <NavBar />
                 <Content>
                     <HomeBanner />
