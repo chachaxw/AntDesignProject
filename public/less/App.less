@@ -1,4 +1,5 @@
 /* created by chacha */
+@import "IconFont";
 
 body {
     background: #f4f4f4;
@@ -84,13 +85,13 @@ p {
     height: 200px;
     background: @bg-color-34;
     text-align: center;
-    overflow: hidden;
+    position: relative;
     ul {
         display: inline-block;
         line-height: 1;
     }
     .footer-logo {
-        margin-top: 20px;
+        padding-top: 20px;
     }
     .footer-nav {
         margin-top: 30px;
@@ -104,16 +105,26 @@ p {
         }
     }
     .footer-social-icon {
-        li{
-            float: left;
-            margin-right: 40px;
-            &:last-child{
-                margin-right: 0;
-            }
-        }
+//        li {
+//            float: left;
+//            margin-right: 40px;
+//            &:last-child {
+//                margin-right: 0;
+//            }
+//        }
         .iconfont {  
             font-size: 40px;
             color: black;
+            cursor: default;
+        }
+        display: inline-block;
+        height: 40px;
+        line-height: 1;
+        &:hover .tips-box {
+            opacity: 1;
+            -webkit-transform: matrix(1,0,0,1,1,1);
+            -moz-transform: matrix(1,0,0,1,1,1);
+            transform: matrix(1,0,0,1,1,1);
         }
     }
     .footer-social-icon,
@@ -124,20 +135,46 @@ p {
 
 /* 页脚tips组件样式 */
 .tips-box {
+    position: absolute;
+    bottom: 100px;
     width: 280px;
     height: 160px;
-    background: black;
+    left: 50%;
+    margin-left: -140px;
+    background: @bg-color-34;
     padding: 15px;
-    box-shadow: 0 0 20px @bg-color-34;
+    opacity: 0;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.5);
+    -webkit-transform: matrix(1,0,0,.2,1,1);
+    -moz-transform: matrix(1,0,0,.2,1,1);
+    transform: matrix(1,0,0,.2,1,1);
+    -webkit-transition: all .5s cubic-bezier(.68,-0.55,.27,1.55);
+    -moz-transition: all .5s cubic-bezier(.68,-0.55,.27,1.55);
+    transition: all .5s cubic-bezier(.68,-0.55,.27,1.55);
     &:after {
         content: "";
         position: absolute;
+        bottom: -15px;
         left: 50%;
-        margin-left: -5px;
+        margin-left: -10px;
         border-top: 15px @bg-color-34 solid;
         border-left: 10px transparent solid;
         border-right: 10px transparent solid;
-        border-bottom: 10px transparent solid;
+        border-bottom: 0 transparent solid;
+    }
+    .tips-img {
+        float: left;
+        height: 130px;
+    }
+    .tips-info {
+        color: @font-color-E8;
+        margin-left: 130px;
+        height: 130px;
+        font-size: 16px;
+        text-align: center;
+        .iconfont {
+            color: @font-color-E8;
+        }
     }
 }
 
@@ -173,7 +210,10 @@ p {
         height: 410px;
         max-width: 300px;
         min-width: 250px;
-        transition: all 0.3s cubic-bezier(.68,-0.55,.27,1.55);
+        -webkit-transition: all .3s cubic-bezier(.68,-0.55,.27,1.55);
+        -moz-transition: all .3s cubic-bezier(.68,-0.55,.27,1.55);
+        transition: all .3s cubic-bezier(.68,-0.55,.27,1.55);
+        cursor: move;
         &:hover {
             box-shadow: 0 5px 35px rgba(52,52,52,0.5);
         }
@@ -263,6 +303,7 @@ p {
     }
 }
 
+
 /* 首页关于样式 */
 .home-about {
     height: 620px;
@@ -297,7 +338,7 @@ p {
 }
 
 
-/* 首页更多关于 */
+/* 首页更多信息组件 */
 .more-info {
     background: @theme-color-blue;
     height: 300px;
@@ -320,3 +361,16 @@ p {
     }
 }
 
+/* 首页更多作品 */
+.home-more-works {
+    background: ＃fff;
+    p {
+        max-width: 468px;
+        margin: 85px auto 0;
+        color: @font-color-81;
+    }
+    .rect-button {
+        background: @theme-color-blue;
+        margin-left: 0;
+    }
+}

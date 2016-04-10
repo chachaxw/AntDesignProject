@@ -1,21 +1,23 @@
 import React from 'react';
 import { Row, Col } from 'antd';
 import '../../../public/less/App.less';
-import '../../../public/less/IconFont.less';
 
 const SocialTips = React.createClass ({
-    getInitialState: function() {
-        return {src: ""}
-    },
 
     render: function() {
+    
+        const src = "public/images/qrcode.png";
+        
         return (
             <div className="tips-box">
                 <div className="tips-img">
-                    <img src={this.state.src}/>
+                    <img src={src}/>
                 </div>
                 <div className="tips-info">
-                    {this.props.info}
+                    <p>
+                        Scan the QRCode!
+                    </p>
+                    <i className="iconfont icon-scan"></i>
                 </div>
             </div>
         )
@@ -23,7 +25,9 @@ const SocialTips = React.createClass ({
 });
 
 const Footer = React.createClass ({
+
     render: function() {
+    
         return (
             <footer className="footer">
                 <div className="footer-logo">
@@ -38,11 +42,8 @@ const Footer = React.createClass ({
                     </ul>
                 </nav>
                 <div className="footer-social-icon">
-                    <ul className="clearfix">
-                        <li><i className="iconfont icon-qq"></i></li>
-                        <li><i className="iconfont icon-weixin"></i></li>
-                        <li><i className="iconfont icon-weibo"></i></li>
-                    </ul>
+                    <i className="iconfont icon-weixin"></i>
+                    <SocialTips />
                 </div>
                 <div className="footer-info">
                     CopyRight © 2016. All Rights Reserved.

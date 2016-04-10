@@ -8,8 +8,10 @@ import HomeAbout from '../component/home/HomeAbout';
 import MoreInfo from '../component/common/MoreInfo';
 import InfoContent from '../component/home/InfoCon';
 import HomePortfolio from '../component/home/HomePortfolio';
+import HomeMore from '../component/home/HomeMore';
 import Footer from '../component/common/Footer';
 import LoadingProgress from '../component/common/LoadingProgress';
+import AboutPage from '../component/about/AboutPage';
 
 const mountNode = document.getElementById('react-content');
 
@@ -25,6 +27,7 @@ const IndexPage = React.createClass({
                         <InfoContent />
                     </MoreInfo>
                     <HomePortfolio />
+                    <HomeMore />
                 </Content>
                 <Footer />
             </div>
@@ -32,4 +35,5 @@ const IndexPage = React.createClass({
     }
 });
 
-ReactDOM.render(<IndexPage />, mountNode);
+
+ReactDOM.render(<AboutPage />, mountNode);

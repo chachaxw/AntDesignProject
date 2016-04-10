@@ -39,6 +39,6 @@
     "start": "npm run dev",
     "dev": "dora -p 8001 --plugins webpack,hmr,proxy,livereload?enableJs=false",
     "lint": "eslint --ext .js,.jsx src",
-    "build": "atool-build -o ./dist/chacha-antd-project/1.0.1"
+    "build": "atool-build -o ./dist/chacha-react-project/1.0.2"
   }
 }
