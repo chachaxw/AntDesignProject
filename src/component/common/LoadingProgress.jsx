@@ -10,7 +10,7 @@ const LoadingProgress = React.createClass({
     },
 
     loading: function() {
-         this.setState({percent: this.state.percent + 1});
+        this.setState({percent: this.state.percent + 1});
     },
 
     componentDidMount: function() {

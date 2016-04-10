@@ -7,6 +7,7 @@ import SortableMixin from "../../common/react-sortable-mixin";
 const ListItemWrapper = React.createClass ({
     
     render: function() {
+        
         return (
             <Col span="6">
                 <div className="portfolio-item">
@@ -54,21 +55,18 @@ const PortfolioItem = React.createClass ({
         };
     },
     
-    componentDidMount: function() {
-        
-    },
-    
     handleSort: function (evt) { 
-        console.log("hello chacha");
+        console.log([SortableMixin]);
     },
 
     render: function() {
         
         return (
-            <Row>
-                {this.state.items.map(function(item) {
-                    return <ListItemWrapper key={item.id} data={item} />
-                })}
+            <Row ref="list">
+                {this.state.items.map( item => (
+                        <ListItemWrapper key={item.id} data={item} />
+                    )
+                )}
             </Row>
         )
     }

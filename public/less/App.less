@@ -11,7 +11,9 @@ body {
 @bg-color-34: #343434;
 @bg-color-F2: #F2F2F2;
 @bg-color-blue: #c2def2;
+@bg-color-6F: #3B516F;
 @theme-color-blue: #1573C6;
+@theme-color-red: #E72525;
 
 p {
     text-align: center;
@@ -132,6 +134,7 @@ p {
         margin-top: 10px;
     }
 }
+
 
 /* 页脚tips组件样式 */
 .tips-box {
@@ -338,7 +341,7 @@ p {
 }
 
 
-/* 首页更多信息组件 */
+/* 首页更多信息组件样式 */
 .more-info {
     background: @theme-color-blue;
     height: 300px;
@@ -359,7 +362,12 @@ p {
         background: @bg-color-34;
         margin-top: 15px;
     }
+    h1 {
+        font-size: 48px;
+        font-weight: 200;
+    }
 }
+
 
 /* 首页更多作品 */
 .home-more-works {
@@ -373,4 +381,120 @@ p {
         background: @theme-color-blue;
         margin-left: 0;
     }
+}
+
+
+/* 全屏大图组件样式 */
+.hero-img-box {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: no-repeat center;
+    background-size: cover;
+    overflow: hidden;
+    z-index: -99;
+}
+
+
+/* 全屏内容组件样式 */
+.hero-content {
+    text-align: center;
+    position: relative;
+    height: 94vh;
+    color: white;
+    overflow: hidden;
+    h1 {
+        margin-top: 190px;
+        font-size: 72px;
+        font-weight: 200;
+        .blue {
+            color: @theme-color-blue;
+        }
+        .red {
+            color: @theme-color-red;
+        }
+    }
+    p {
+        max-width: 350px;
+        margin: 40px auto;
+        font-size: 18px;
+    }
+    .rect-button {
+        width: 200px;
+        background: rgb(52,52,52);
+    }
+    .down-arrow {
+        position: absolute;
+        left: 50%;
+        margin-left: -8px;
+        bottom: 50px;
+        width: 16px;
+        height: 130px;
+        background: no-repeat center;
+        background-image: url(../images/down-arrow.png);
+    }
+}
+
+
+/* 关于页面我的技能样式 */
+.my-skill {
+    background: @bg-color-6F;
+    color: @font-color-E8;
+    text-align: center;
+    font-weight: 200;
+    .my-title-img,
+    .my-skill-list {
+        height: 512px;
+        overflow: hidden;
+    }
+    .my-title-img{
+        font-size: 36px;
+        padding: 190px 0;
+        background: url(../images/who-am-I.png) center no-repeat;
+        background-size: cover;
+        p {
+            max-width: 340px;
+            margin: 0 auto;
+        }
+    }
+    .my-skill-list {
+        h2 {
+            font-size: 36px;
+            margin: 30px auto;
+            font-weight: 200;
+        }
+        li {
+            line-height: 30px;
+            margin-top: 15px;
+        }
+        .skill-name {
+            margin-right: 10px;
+            font-size: 16px;
+            display: inline-block;
+            width: 100px;
+            text-align: right;
+        }
+        .ant-progress-line-wrap {
+            width: 80%;
+            font-size: 16px;
+        }
+    }
+}
+
+
+
+/* 各种屏幕下的页面布局 */
+
+@media only screen and (min-width: 1280px) {
+    
+}
+
+
+@media only screen and (min-width: 769px) {
+    
+}
+
+
+@media only screen and (min-width: 320px) {
+    
 }
