@@ -3,13 +3,32 @@ import ReactDOM from "react-dom";
 import { Row, Col } from "antd";
 import Sortable from "../../common/Sortable";
 import SortableMixin from "../../common/react-sortable-mixin";
+import ResponsiveMixin from "react-responsive-mixin";
 
 const ListItemWrapper = React.createClass ({
+
+    mixins: [ResponsiveMixin],
+
+    getInitialState: function() {
+        return {span: "6"}  
+    },
+    
+    componentDidMount: function(){
+        this.media({minWidth: 1280}, function() {
+            this.setState({span: "6"});
+        }.bind(this));
+        this.media({minWidth: 769, maxWidth: 1279}, function() {
+            this.setState({span: "12"});
+        }.bind(this));
+        this.media({minWidth: 320, maxWidth: 768}, function() {
+            this.setState({span: "24"});
+        }.bind(this));
+    },
     
     render: function() {
         
         return (
-            <Col span="6">
+            <Col span={this.state.span}>
                 <div className="portfolio-item">
                     <div className="portfolio-img">
                         <img src={this.props.data.src}/>

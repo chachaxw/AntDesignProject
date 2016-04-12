@@ -36,4 +36,4 @@ const IndexPage = React.createClass({
 });
 
 
-ReactDOM.render(<AboutPage />, mountNode);
+ReactDOM.render(<IndexPage />, mountNode);

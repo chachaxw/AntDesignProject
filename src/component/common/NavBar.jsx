@@ -1,8 +1,13 @@
 import React from 'react';
 import { Row, Col } from 'antd';
 import '../../../public/less/App.less';
+import ResponsiveMixin from "react-responsive-mixin";
+
+const ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
 
 const NavBar = React.createClass({
+    
+    mixins: [ResponsiveMixin],
 
     render: function(){
         return (
@@ -16,10 +21,13 @@ const NavBar = React.createClass({
                     <Col span="12" className="nav-menu">
                         <ul>
                             <li><a href="" className="nav-active">Home</a></li>
+                            <li><a href="">Works</a></li>
                             <li><a href="">About</a></li>
-                            <li><a href="">Portfolio</a></li>
                             <li><a href="http://github.com/chachaxw" target="_blank">Github</a></li>
                         </ul>
+                        <span className="tab-menu">
+                            <i className="iconfont icon-menu"></i>
+                        </span>
                     </Col>
                 </Row>
             </nav>

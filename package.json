@@ -18,7 +18,8 @@
     "jquery": "^2.2.3",
     "public": "^0.1.2",
     "react": "0.14.x",
-    "react-dom": "0.14.x"
+    "react-dom": "0.14.x",
+    "react-responsive-mixin": "^0.3.5"
   },
   "devDependencies": {
     "dora": "0.3.x",

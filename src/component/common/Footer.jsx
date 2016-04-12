@@ -36,8 +36,8 @@ const Footer = React.createClass ({
                 <nav className="footer-nav">
                     <ul className="clearfix">
                         <li><a href="">Home</a></li>
+                        <li><a href="">Works</a></li>
                         <li><a href="">About</a></li>
-                        <li><a href="">Portfolio</a></li>
                         <li><a href="http://github.com/chachaxw" target="_blank">Github</a></li>
                     </ul>
                 </nav>
