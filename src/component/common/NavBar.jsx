@@ -3,11 +3,15 @@ import { Row, Col } from 'antd';
 import '../../../public/less/App.less';
 import ResponsiveMixin from "react-responsive-mixin";
 
-const ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
+/*const ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;*/
 
 const NavBar = React.createClass({
     
     mixins: [ResponsiveMixin],
+
+    handleClick: function() {
+        console.log("hello");
+    },
 
     render: function(){
         return (
@@ -26,7 +30,7 @@ const NavBar = React.createClass({
                             <li><a href="http://github.com/chachaxw" target="_blank">Github</a></li>
                         </ul>
                         <span className="tab-menu">
-                            <i className="iconfont icon-menu"></i>
+                        <i className="iconfont icon-menu" onClick={this.handleClick}></i>
                         </span>
                     </Col>
                 </Row>

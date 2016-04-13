@@ -503,6 +503,10 @@ p {
 
 
 @media only screen and (min-width: 769px) and (max-width: 1279px) {
+    .tab-menu {
+        display: none;
+    }
+    
     .portfolio-box {
         .portfolio-item {
             max-width: 360px;
@@ -513,8 +517,23 @@ p {
 
 
 @media only screen and (min-width: 320px) and (max-width: 768px) {
-    .nav-menu {
+    .nav-menu ul {
         display: none;
+    }
+    
+    .tab-menu {
+        float: right;
+        margin-top: 7px;
+        margin-right: 10px;
+        line-height: 38px;
+        .iconfont {
+            font-size: 38px;
+            color: @font-color-E8;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
     }
     
     .banner-buttons {
