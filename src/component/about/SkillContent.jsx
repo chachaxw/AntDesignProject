@@ -1,5 +1,6 @@
 import React from "react";
 import { Progress, Row, Col } from 'antd';
+import ResponsiveMixin from "react-responsive-mixin";
 
 const ProgressLine = Progress.Line;
 
@@ -16,6 +17,8 @@ const ListItem = React.createClass ({
 });
 
 const SkillContent = React.createClass ({
+   
+    mixins: [ResponsiveMixin],
    
     getInitialState: function() {
         return {
@@ -55,20 +58,33 @@ const SkillContent = React.createClass ({
                     skill: "<sketch/>",
                     percent: "80"
                 }
-            ]
+            ],
+            spanLeft: "8",
+            spanRight: "16"
         }
+    },
+    
+    componentDidMount: function() {
+        this.setState(function(){
+            this.media({minWidth: 861}, function() {
+                this.setState({spanLeft: "8", spanRight: "16"});
+            }.bind(this)); 
+            this.media({minWidth: 320, maxWidth: 860}, function() {
+                this.setState({spanLeft: "24", spanRight: "24"});
+            }.bind(this));  
+        })  
     },
    
     render: function() {
         return (
             <div className="my-skill">
                 <Row>
-                    <Col span="8">
+                    <Col span={this.state.spanLeft}>
                         <div className="my-title-img">
                             <p>A Full Inspiration Front-end Developer & UI Designer</p>
                         </div>
                     </Col>
-                    <Col span="16">
+                    <Col span={this.state.spanRight}>
                         <div className="my-skill-list">
                             <h2>Skills</h2>
                             <div className="skill-list-item">

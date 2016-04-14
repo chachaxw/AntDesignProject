@@ -10,7 +10,7 @@ import InfoContent from '../component/home/InfoCon';
 import HomePortfolio from '../component/home/HomePortfolio';
 import HomeMore from '../component/home/HomeMore';
 import Footer from '../component/common/Footer';
-import LoadingProgress from '../component/common/LoadingProgress';
+/*import LoadingProgress from '../component/common/LoadingProgress';*/
 import AboutPage from '../component/about/AboutPage';
 
 const mountNode = document.getElementById('react-content');

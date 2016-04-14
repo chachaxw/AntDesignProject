@@ -186,6 +186,7 @@ p {
 }
 
 .nav-menu,
+.tab-menu,
 .footer-nav {
     a { 
         color: @font-color-E8;
@@ -493,6 +494,10 @@ p {
 /* 各种屏幕下的页面布局 */
 
 @media only screen and (min-width: 1280px) {
+    .tab-menu {
+        display: none;
+    }
+    
     .portfolio-box {
         .portfolio-item {
             max-width: 300px;
@@ -516,25 +521,44 @@ p {
 }
 
 
-@media only screen and (min-width: 320px) and (max-width: 768px) {
-    .nav-menu ul {
+@media only screen and (min-width: 0) and (max-width: 768px) {
+    .nav-menu > ul {
         display: none;
     }
     
     .tab-menu {
-        float: right;
-        margin-top: 7px;
-        margin-right: 10px;
-        line-height: 38px;
-        .iconfont {
-            font-size: 38px;
-            color: @font-color-E8;
-            cursor: pointer;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        text-align: center;
+        z-index: 1;
+        background: @bg-color-34;
+        .tab-menu-button {
+            float: right;
+            margin-top: 7px;
+            margin-right: 10px;
+            line-height: 38px;
+            .iconfont {
+                font-size: 38px;
+                color: @font-color-E8;
+                cursor: pointer;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                user-select: none;
+            }
+        }
+        .tab-menu-list {
+            margin-top: 60px;
+            font-size: 16px;
+            ul {
+                margin-bottom: 30px;
+            }
+            li {
+                margin-top: 10px;
+            }
         }
     }
+    
     
     .banner-buttons {
         text-align: center;
@@ -556,6 +580,12 @@ p {
     .portfolio-box {
         .portfolio-item {
             margin-top: 60px;
+        }
+    }
+    
+    .my-skill {
+        .my-skill-list ul {
+            padding: 0 20px;
         }
     }
     
