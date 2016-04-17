@@ -186,7 +186,7 @@ p {
 }
 
 .nav-menu,
-.tab-menu,
+.tap-menu,
 .footer-nav {
     a { 
         color: @font-color-E8;
@@ -555,7 +555,7 @@ p {
 /* 各种屏幕下的页面布局 */
 
 @media only screen and (min-width: 1280px) {
-    .tab-menu {
+    .tap-menu {
         display: none;
     }
     
@@ -569,7 +569,7 @@ p {
 
 
 @media only screen and (min-width: 769px) and (max-width: 1279px) {
-    .tab-menu {
+    .tap-menu {
         display: none;
     }
     
@@ -587,14 +587,14 @@ p {
         display: none;
     }
     
-    .tab-menu {
+    .tap-menu {
         position: absolute;
         width: 100%;
         top: 0;
         text-align: center;
         z-index: 1;
         background: @bg-color-34;
-        .tab-menu-button {
+        .tap-menu-button {
             float: right;
             margin-top: 7px;
             margin-right: 10px;
@@ -608,14 +608,20 @@ p {
                 user-select: none;
             }
         }
-        .tab-menu-list {
+        .tap-menu-list {
             margin-top: 60px;
             font-size: 16px;
             ul {
-                margin-bottom: 30px;
+                overflow: hidden;
+                -webkit-transition: all .3s cubic-bezier(.68,-0.55,.27,1.55);
+                -moz-transition: all .3s cubic-bezier(.68,-0.55,.27,1.55);
+                transition: all .3s cubic-bezier(.68,-0.55,.27,1.55);
             }
             li {
                 margin-top: 10px;
+                &:last-child {
+                    margin-bottom: 30px;
+                }
             }
         }
     }

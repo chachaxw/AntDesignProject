@@ -1,38 +1,8 @@
 import React from 'react';
 import { Row, Col } from 'antd';
 import '../../../public/less/App.less';
-import ResponsiveMixin from "react-responsive-mixin";
-
-/*const ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;*/
-
-const TabMenu = React.createClass({
-
-    componentDidMount: function() {
-        
-    },
-
-    handleClick: function() {
-        console.log("hello");
-    },
-
-    render: function() {
-        return (
-            <div className="tab-menu">
-                <span className="tab-menu-button">
-                    <i className="iconfont icon-menu" onClick={this.handleClick}></i>
-                </span>
-                <div className="tab-menu-list">
-                    <ul>
-                        <li><a href="" className="nav-active">Home</a></li>
-                        <li><a href="">Works</a></li>
-                        <li><a href="">About</a></li>
-                        <li><a href="http://github.com/chachaxw" target="_blank">Github</a></li>
-                    </ul>
-                </div>
-            </div>
-        )     
-    }
-});
+import TapMenu from './TapMenu';
+import ResponsiveMixin from 'react-responsive-mixin';
 
 const NavBar = React.createClass({
     
@@ -56,7 +26,7 @@ const NavBar = React.createClass({
                         </ul>
                     </Col>
                 </Row>
-                <TabMenu/>
+                <TapMenu />
             </nav>
         )
     }

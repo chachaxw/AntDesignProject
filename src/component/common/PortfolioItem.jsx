@@ -1,31 +1,9 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import { Row, Col } from "antd";
-import { createStore } from "redux";
-import Sortable from "../../common/Sortable";
-import SortableMixin from "../../common/react-sortable-mixin";
-import ResponsiveMixin from "react-responsive-mixin";
-
-function counter( state = 0, action ) {
-    switch(action.type){
-        case 'INCREMENT': 
-            return state + 1
-        case 'DECREMENT':
-            return state - 1 
-        default: 
-            return state
-    }
-}
-
-let store = createStore(counter)
-
-store.subscribe( () =>
-    console.log(store.getState())
-)
-
-store.dispatch({ type: 'INCREMENT' })
-store.dispatch({ type: 'INCREMENT' })
-store.dispatch({ type: 'DECREMENT' })
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Row, Col } from 'antd';
+import Sortable from '../../common/Sortable';
+import SortableMixin from '../../common/react-sortable-mixin';
+import ResponsiveMixin from 'react-responsive-mixin';
 
 const ListItemWrapper = React.createClass ({
 
