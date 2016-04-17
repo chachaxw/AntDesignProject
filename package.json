@@ -19,19 +19,23 @@
     "public": "^0.1.2",
     "react": "0.14.x",
     "react-dom": "0.14.x",
-    "react-responsive-mixin": "^0.3.5"
+    "react-redux": "^4.4.5",
+    "react-responsive-mixin": "^0.3.5",
+    "react-router": "^2.2.4",
+    "redux": "^3.4.0"
   },
   "devDependencies": {
+    "babel-eslint": "^6.0.0",
     "dora": "0.3.x",
-    "dora-plugin-webpack": "0.6.x",
     "dora-plugin-hmr": "0.5.x",
     "dora-plugin-livereload": "0.3.x",
     "dora-plugin-proxy": "0.6.x",
+    "dora-plugin-webpack": "0.6.x",
     "eslint": "2.x",
     "eslint-config-airbnb": "6.x",
     "eslint-plugin-react": "4.x",
     "pre-commit": "1.x",
-    "babel-eslint": "^6.0.0"
+    "redux-devtools": "^3.2.0"
   },
   "pre-commit": [
     "lint"
