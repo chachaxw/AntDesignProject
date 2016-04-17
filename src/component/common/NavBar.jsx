@@ -2,10 +2,11 @@ import React from 'react';
 import { Row, Col } from 'antd';
 import '../../../public/less/App.less';
 import TapMenu from './TapMenu';
+import { Link } from 'react-router';
 import ResponsiveMixin from 'react-responsive-mixin';
 
 const NavBar = React.createClass({
-    
+
     mixins: [ResponsiveMixin],
 
     render: function(){
@@ -13,15 +14,19 @@ const NavBar = React.createClass({
             <nav className="nav-bar">
                 <Row>
                     <Col span="12" className="nav-logo">
-                        <a href="">
+                        <a href="/">
                             <img src="public/images/nav-logo.png" />
-                        </a>      
+                        </a>
                     </Col>
                     <Col span="12" className="nav-menu">
                         <ul>
-                            <li><a href="" className="nav-active">Home</a></li>
-                            <li><a href="">Works</a></li>
-                            <li><a href="">About</a></li>
+                            <li><a href="/" className="nav-active">Home</a></li>
+                            <li>
+                                <Link to="works">Works</Link>
+                            </li>
+                            <li>
+                                <Link to="about">About</Link>
+                            </li>
                             <li><a href="http://github.com/chachaxw" target="_blank">Github</a></li>
                         </ul>
                     </Col>

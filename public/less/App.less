@@ -107,14 +107,7 @@ p {
         }
     }
     .footer-social-icon {
-//        li {
-//            float: left;
-//            margin-right: 40px;
-//            &:last-child {
-//                margin-right: 0;
-//            }
-//        }
-        .iconfont {  
+        .iconfont {
             font-size: 40px;
             color: black;
             cursor: default;
@@ -188,7 +181,7 @@ p {
 .nav-menu,
 .tap-menu,
 .footer-nav {
-    a { 
+    a {
         color: @font-color-E8;
         &:hover,
         &.nav-active {
@@ -294,7 +287,11 @@ p {
     .banner-logo {
         max-width: 380px;
         margin: 140px auto;
+        padding: 0 10px;
         margin-bottom: 0;
+        img {
+            width: 100%;
+        }
     }
     .banner-buttons {
         max-width: 380px;
@@ -383,6 +380,7 @@ p {
     p {
         max-width: 468px;
         margin: 85px auto 0;
+        padding: 0 10px;
         color: @font-color-81;
     }
     .rect-button {
@@ -558,7 +556,7 @@ p {
     .tap-menu {
         display: none;
     }
-    
+
     .portfolio-box {
         .portfolio-item {
             max-width: 300px;
@@ -572,7 +570,7 @@ p {
     .tap-menu {
         display: none;
     }
-    
+
     .portfolio-box {
         .portfolio-item {
             max-width: 360px;
@@ -586,7 +584,7 @@ p {
     .nav-menu > ul {
         display: none;
     }
-    
+
     .tap-menu {
         position: absolute;
         width: 100%;
@@ -594,6 +592,9 @@ p {
         text-align: center;
         z-index: 1;
         background: @bg-color-34;
+        .nav-logo {
+            text-align: left;
+        }
         .tap-menu-button {
             float: right;
             margin-top: 7px;
@@ -625,8 +626,8 @@ p {
             }
         }
     }
-    
-    
+
+
     .banner-buttons {
         text-align: center;
         .rect-button {
@@ -634,26 +635,26 @@ p {
             margin: 10px auto;
         }
     }
-    
+
     .home-about {
         height: 560px;
-        .about-user-head, 
+        .about-user-head,
         .about-user-head img {
             width: 200px;
             height: 200px;
         }
     }
-    
+
     .portfolio-box {
         .portfolio-item {
             margin-top: 60px;
         }
     }
-    
+
     .my-skill {
         .my-skill-list ul {
             padding: 0 20px;
         }
     }
-    
+
 }
