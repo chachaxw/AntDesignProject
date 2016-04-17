@@ -1,13 +1,14 @@
 import React from 'react';
 import { Row, Col } from 'antd';
+import { Link } from 'react-router';
 import '../../../public/less/App.less';
 
 const SocialTips = React.createClass ({
 
     render: function() {
-    
+
         const src = "public/images/qrcode.png";
-        
+
         return (
             <div className="tips-box">
                 <div className="tips-img">
@@ -27,7 +28,7 @@ const SocialTips = React.createClass ({
 const Footer = React.createClass ({
 
     render: function() {
-    
+
         return (
             <footer className="footer">
                 <div className="footer-logo">
@@ -35,9 +36,13 @@ const Footer = React.createClass ({
                 </div>
                 <nav className="footer-nav">
                     <ul className="clearfix">
-                        <li><a href="">Home</a></li>
-                        <li><a href="">Works</a></li>
-                        <li><a href="">About</a></li>
+                        <li><a href="/">Home</a></li>
+                          <li>
+                              <Link to="works">Works</Link>
+                          </li>
+                          <li>
+                              <Link to="about">About</Link>
+                          </li>
                         <li><a href="http://github.com/chachaxw" target="_blank">Github</a></li>
                     </ul>
                 </nav>

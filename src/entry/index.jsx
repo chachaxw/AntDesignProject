@@ -1,38 +1,21 @@
 import '../common/lib';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import NavBar from '../component/common/NavBar';
-import Content from '../component/common/Content';
-import HomeBanner from '../component/home/HomeBanner';
-import HomeAbout from '../component/home/HomeAbout';
-import MoreInfo from '../component/common/MoreInfo';
-import InfoContent from '../component/home/InfoCon';
-import HomePortfolio from '../component/home/HomePortfolio';
-import HomeMore from '../component/home/HomeMore';
-import Footer from '../component/common/Footer';
-/*import LoadingProgress from '../component/common/LoadingProgress';*/
+import HomePage from '../component/home/HomePage';
+import AboutPage from '../component/about/AboutPage';
+import WorksPage from '../component/works/WorksPage';
+import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
 const mountNode = document.getElementById('react-content');
 
-const IndexPage = React.createClass({
-    render: function() {
-        return (
-            <div>
-                <NavBar />
-                <Content>
-                    <HomeBanner />
-                    <HomeAbout />
-                    <MoreInfo>
-                        <InfoContent />
-                    </MoreInfo>
-                    <HomePortfolio />
-                    <HomeMore />
-                </Content>
-                <Footer />
-            </div>
-        )
-    }
-});
+const routes = (
+    <Router history={browserHistory}>
+        <Route path="/">
+            <IndexRoute component={HomePage}></IndexRoute>
+              <Route name="about" path="about" component={AboutPage}></Route>
+              <Route name="works" path="works" component={WorksPage}></Route>
+        </Route>
+    </Router>
+);
 
-
-ReactDOM.render(<IndexPage />, mountNode);
+ReactDOM.render(routes, mountNode);
