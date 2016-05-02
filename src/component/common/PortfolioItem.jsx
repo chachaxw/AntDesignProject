@@ -57,17 +57,17 @@ const PortfolioItem = React.createClass ({
 /*                    url: "http://github.com/chachaxw",*/
                     src: "public/images/item2.png",
                     title: "Web Design",
-                    desc: "This is an app design work, if you want to design an app, I am very pleased to do this for you."},
+                    desc: "This is a web design work, if you want to design or build a website, it’s my honor to work this for you."},
                 {   id: "3",
 /*                    url: "http://github.com/chachaxw",*/
                     src: "public/images/item3.png",
                     title: "Responsive Design",
-                    desc: "This is an app design work, if you want to design an app, I am very pleased to do this for you."},
+                    desc: "This is a responsive web design work, if you want a responsive website, I can work for you."},
                 {   id: "4",
 /*                    url: "http://github.com/chachaxw",*/
                     src: "public/images/item4.png",
                     title: "Motion Design",
-                    desc: "This is an app design work, if you want to design an app, I am very pleased to do this for you."}
+                    desc: "This is an interaction design work, if you want to design an app, I am very pleased to do this for you."}
             ]
         };
     },
