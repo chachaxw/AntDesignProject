@@ -14,7 +14,7 @@ const TapMenu = React.createClass({
     },
 
     handleClick: function() {
-        console.log(this.state);
+        // console.log(this.state);
 
         const isToggled = this.state.toggle;
 

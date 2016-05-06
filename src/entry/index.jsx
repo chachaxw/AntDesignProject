@@ -12,8 +12,8 @@ const routes = (
     <Router history={browserHistory}>
         <Route path="/">
             <IndexRoute component={HomePage}></IndexRoute>
-              <Route name="about" path="about" component={AboutPage}></Route>
-              <Route name="works" path="works" component={WorksPage}></Route>
+            <Route name="about" path="about" component={AboutPage}></Route>
+            <Route name="works" path="works" component={WorksPage}></Route>
         </Route>
     </Router>
 );

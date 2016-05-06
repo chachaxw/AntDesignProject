@@ -7,7 +7,7 @@ class WorksPage extends React.Component {
         return (
             <div>
                 <NavBar />
-                my works!
+                <h1 style={{textAlign: 'center',marginTop: '200px'}}>my works!</h1>
             </div>
         )
     }

@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Row, Col } from 'antd';
-import Sortable from '../../common/Sortable';
-import SortableMixin from '../../common/react-sortable-mixin';
+// import Sortable from '../../common/Sortable';
+// import SortableMixin from '../../common/react-sortable-mixin';
 import ResponsiveMixin from 'react-responsive-mixin';
 
 const ListItemWrapper = React.createClass ({
@@ -10,9 +10,9 @@ const ListItemWrapper = React.createClass ({
     mixins: [ResponsiveMixin],
 
     getInitialState: function() {
-        return {span: "6"}  
+        return {span: "6"}
     },
-    
+
     componentDidMount: function(){
         this.media({minWidth: 1280}, function() {
             this.setState({span: "6"});
@@ -24,9 +24,9 @@ const ListItemWrapper = React.createClass ({
             this.setState({span: "24"});
         }.bind(this));
     },
-    
+
     render: function() {
-        
+
         return (
             <Col span={this.state.span}>
                 <div className="portfolio-item">
@@ -36,7 +36,7 @@ const ListItemWrapper = React.createClass ({
                     <div className="portfolio-desc">
                         <h2>{this.props.data.title}</h2>
                         <p>{this.props.data.desc}</p>
-                    </div>  
+                    </div>
                 </div>
             </Col>
         )
@@ -45,8 +45,8 @@ const ListItemWrapper = React.createClass ({
 
 const PortfolioItem = React.createClass ({
 
-    mixins: [SortableMixin],
-    
+    // mixins: [SortableMixin],
+
     getInitialState: function() {
         return {
             items: [
@@ -73,13 +73,13 @@ const PortfolioItem = React.createClass ({
             ]
         };
     },
-    
-    handleSort: function (evt) { 
+
+    handleSort: function (evt) {
         console.log([SortableMixin]);
     },
 
     render: function() {
-        
+
         return (
             <Row ref="list">
                 {this.state.items.map( item => (
