@@ -73,10 +73,6 @@ const PortfolioItem = React.createClass ({
             ]
         };
     },
-<<<<<<< HEAD
-
-    handleSort: function (evt) {
-=======
 
 /*
     handleSort: function (evt) {

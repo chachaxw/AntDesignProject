@@ -17,64 +17,64 @@ const ListItem = React.createClass ({
 });
 
 const SkillContent = React.createClass ({
-   
+
     mixins: [ResponsiveMixin],
-   
+
     getInitialState: function() {
         return {
             items: [
                 {
                     id: "1",
                     skill: "<html/>",
-                    percent: "85"
+                    percent: 85
                 },
                 {
                     id: "2",
                     skill: "<css/>",
-                    percent: "80"
+                    percent: 80
                 },
                 {
                     id: "3",
                     skill: "<javascript/>",
-                    percent: "75"
+                    percent: 75
                 },
                 {
                     id: "4",
                     skill: "<php/>",
-                    percent: "50"
+                    percent: 50
                 },
                 {
                     id: "5",
                     skill: "<nodejs/>",
-                    percent: "60"
+                    percent: 60
                 },
                 {
                     id: "6",
                     skill: "<photoshop/>",
-                    percent: "80"
+                    percent: 80
                 },
                 {
                     id: "7",
                     skill: "<sketch/>",
-                    percent: "80"
+                    percent: 80
                 }
             ],
             spanLeft: "8",
             spanRight: "16"
         }
     },
-    
+
     componentDidMount: function() {
         this.setState(function(){
             this.media({minWidth: 861}, function() {
                 this.setState({spanLeft: "8", spanRight: "16"});
-            }.bind(this)); 
+            }.bind(this));
             this.media({minWidth: 320, maxWidth: 860}, function() {
                 this.setState({spanLeft: "24", spanRight: "24"});
-            }.bind(this));  
-        })  
+            }.bind(this));
+        })
     },
-   
+
     render: function() {
         return (
             <div className="my-skill">

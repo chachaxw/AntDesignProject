@@ -408,6 +408,9 @@ p {
     height: 94vh;
     color: white;
     overflow: hidden;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
     h1 {
         margin-top: 190px;
         font-size: 72px;
@@ -503,6 +506,7 @@ p {
             line-height: 1.6;
             font-size: 18px;
             font-weight: 300;
+            padding: 0 10px;
         }
     }
     .interest-list {
@@ -517,15 +521,50 @@ p {
             line-height: 120px;
             border: 2px @font-color-E8 solid;
             border-radius: 50%;
+            &:hover {
+                -webkit-animation: flip .5s;
+                animation: flip .5s;
+            }
         }
         p {
             font-size: 24px;
             margin-top: 10px;
-            margin-bottom: 40px;
         }
         .iconfont {
             font-size: 60px;
         }
+    }
+}
+
+
+/* 关于页面下载我的简历样式 */
+.what-i-did {
+    .what-title {
+        height: 200px;
+        text-align: center;
+        background-color: @font-color-E8;
+        h1 {
+            font-size: 36px;
+            color: @bg-color-34;
+            font-weight: normal;
+            padding: 30px 10px;
+        }
+    }
+    .what-content{
+        position: relative;
+        background-color: white;
+        height: 1000px;
+    }
+    .what-line {
+        background-color: @font-color-E8;
+        width: 2px;
+        height: 100%;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        transform: translateX(-50%);
     }
 }
 
@@ -579,7 +618,7 @@ p {
 }
 
 
-@media only screen and (min-width: 0) and (max-width: 768px) {
+@media only screen and (min-width: 320px) and (max-width: 768px) {
     .nav-menu > ul {
         display: none;
     }
@@ -656,4 +695,104 @@ p {
         }
     }
 
+    .hero-content {
+      h1  {
+        font-size: 48px;
+      }
+    }
+
+    .more-info {
+      h1 {
+        font-size: 36px;
+      }
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 420px) {
+
+  .hero-content {
+    h1  {
+      font-size: 42px;
+      margin-top: 60px;
+    }
+    p {
+      margin: 20px auto;
+    }
+  }
+}
+
+
+/* css3 动画 */
+@-webkit-keyframes flip {
+  from {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  50% {
+    -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  80% {
+    -webkit-transform: perspective(400px) scale3d(.95, .95, .95);
+    transform: perspective(400px) scale3d(.95, .95, .95);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  to {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+}
+
+@keyframes flip {
+  from {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  50% {
+    -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  80% {
+    -webkit-transform: perspective(400px) scale3d(.95, .95, .95);
+    transform: perspective(400px) scale3d(.95, .95, .95);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  to {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
 }

@@ -7,9 +7,8 @@ import SkillContent from './SkillContent';
 import InterestContent from './InterestContent';
 import DownloadResume from './DownloadResume';
 import MoreInfo from '../common/MoreInfo';
+import WhatIDid from './WhatIDid';
 import Footer from '../common/Footer';
-
-const mountNode = document.getElementById('react-content');
 
 const AboutPage = React.createClass({
     render: function() {
@@ -19,14 +18,12 @@ const AboutPage = React.createClass({
                 <NavBar />
                 <Content>
                     <HeroContent />
-                    <MoreInfo style={{height: "200px",lineHeight: "200px;"}}>
+                    <MoreInfo style={{height: "200px",lineHeight: "200px"}}>
                         <h1>Something About Me</h1>
                     </MoreInfo>
                     <SkillContent />
                     <InterestContent />
-                    <MoreInfo style={{height: "200px",lineHeight: "200px;",backgroundColor: "#E8E8E8",color: "#343434"}}>
-                        <h1>What I've Done in School Days?</h1>
-                    </MoreInfo>
+                    <WhatIDid />
                     <DownloadResume />
                 </Content>
                 <Footer />
