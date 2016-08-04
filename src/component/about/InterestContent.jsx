@@ -26,19 +26,19 @@ const Interests = React.createClass({
         return (
             <div className="interest-list">
                 <Row>
-                    <Col span={this.state.span} style={{backgroundColor: "rgba(0,0,0,0.5)",padding: "30px"}}>
+                    <Col span={this.state.span} style={{backgroundColor: "rgba(0,0,0,0.5)",padding: "40px"}}>
                         <span><i className="iconfont icon-camera"></i></span>
                         <p>Photography</p>
                     </Col>
-                    <Col span={this.state.span} style={{backgroundColor: "rgba(0,0,0,0.65)",padding: "30px"}}>
+                    <Col span={this.state.span} style={{backgroundColor: "rgba(0,0,0,0.65)",padding: "40px"}}>
                         <span><i className="iconfont icon-bike"></i></span>
                         <p>Cycling</p>
                     </Col>
-                    <Col span={this.state.span} style={{backgroundColor: "rgba(0,0,0,0.8)",padding: "30px"}}>
+                    <Col span={this.state.span} style={{backgroundColor: "rgba(0,0,0,0.8)",padding: "40px"}}>
                         <span><i className="iconfont icon-music"></i></span>
                         <p>Music</p>
                     </Col>
-                    <Col span={this.state.span} style={{backgroundColor: "rgba(0,0,0,0.9)",padding: "30px"}}>
+                    <Col span={this.state.span} style={{backgroundColor: "rgba(0,0,0,0.9)",padding: "40px"}}>
                         <span><i className="iconfont icon-book"></i></span>
                         <p>Reading</p>
                     </Col>

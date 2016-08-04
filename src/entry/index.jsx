@@ -1,4 +1,4 @@
-import '../common/lib';
+import '../lib/lib';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import HomePage from '../component/home/HomePage';
