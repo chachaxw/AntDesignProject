@@ -11,10 +11,10 @@ const HomeAbout = React.createClass ({
                     <img src="public/images/chacha.png" />
                 </div>
                 <p>
-                    Hello, my name is Chacha, and Chinese name is Zhou Wei.Welcome to my own website !
+                    Hello, my name is Chacha, and Chinese name is 周伟😄.Welcome to my own website !
                 </p>
                 <div className="banner-buttons">
-                    <Button href="/portfolio">Portfolio</Button>
+                    <Button href="http://www.zcool.com.cn/u/2472864" target="_blank">Portfolio</Button>
                     <Button href="http://github.com/chachaxw">Github</Button>
                 </div>
             </BannerImg>
