@@ -10,7 +10,7 @@ const DownloadResume = React.createClass({
                     <p>
                         This is all about me, If you want to know more about me, you can clck the button on below!
                     </p>
-                    <Button href="">
+                    <Button href="http://chachaxw.github.com/myresume">
                         <i className="iconfont icon-download"></i>
                         Download My Resume
                     </Button>

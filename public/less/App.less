@@ -402,6 +402,12 @@ p {
 
 
 /* 全屏内容组件样式 */
+.svg-filters {
+    position: absolute;
+    visibility: hidden;
+    width: 1px;
+    height: 1px;
+}
 .hero-content {
     text-align: center;
     position: relative;
@@ -412,6 +418,8 @@ p {
     -moz-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
     h1 {
+        -webkit-filter: url(#filter);
+        filter: url(/#filter);
         margin-top: 190px;
         font-size: 72px;
         font-weight: 200;
