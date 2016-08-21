@@ -1,5 +1,6 @@
 import React from "react";
-import { Row, Col } from 'antd';
+import Row from 'antd/lib/row';
+import Col from 'antd/lib/col';
 import PortfolioItem from "../common/PortfolioItem";
 
 const HomePortfolio = React.createClass ({

@@ -1,5 +1,7 @@
 import React from "react";
-import { Progress, Row, Col } from 'antd';
+import Row from 'antd/lib/row';
+import Col from 'antd/lib/col';
+import Progress from 'antd/lib/progress';
 import ResponsiveMixin from "react-responsive-mixin";
 
 const ProgressLine = Progress.Line;

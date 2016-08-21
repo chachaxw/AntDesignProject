@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Row, Col } from 'antd';
-// import Sortable from '../../common/Sortable';
-// import SortableMixin from '../../common/react-sortable-mixin';
+import Row from 'antd/lib/row';
+import Col from 'antd/lib/col';
 import ResponsiveMixin from 'react-responsive-mixin';
 
 const ListItemWrapper = React.createClass ({

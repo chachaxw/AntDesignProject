@@ -1,6 +1,7 @@
 import React from 'react';
 import MoreInfo from '../common/MoreInfo';
-import { Row, Col } from 'antd';
+import Row from 'antd/lib/row';
+import Col from 'antd/lib/col';
 import ResponsiveMixin from 'react-responsive-mixin';
 
 const Interests = React.createClass({

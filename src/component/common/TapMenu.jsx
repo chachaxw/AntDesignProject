@@ -1,7 +1,7 @@
 import React from 'react';
-import { Row, Col } from 'antd';
+import Row from 'antd/lib/row';
+import Col from 'antd/lib/col';
 import { Link } from 'react-router';
-/*const ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;*/
 
 const TapMenu = React.createClass({
 

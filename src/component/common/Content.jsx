@@ -1,5 +1,6 @@
 import React from 'react';
-import { Row, Col } from 'antd';
+import Row from 'antd/lib/row';
+import Col from 'antd/lib/col';
 import '../../../public/less/App.less';
 
 const Content = React.createClass ({
