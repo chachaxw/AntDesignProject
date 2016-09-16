@@ -33,7 +33,7 @@ const Footer = React.createClass ({
         return (
             <footer className="footer">
                 <div className="footer-logo">
-                    <a href="/"><img src="public/images/nav-logo.png" /></a>
+                    <a href="/"><img src="public/images/nav-logo.svg" /></a>
                 </div>
                 <nav className="footer-nav">
                     <ul className="clearfix">

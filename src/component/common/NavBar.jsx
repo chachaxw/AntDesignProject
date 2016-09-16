@@ -16,7 +16,7 @@ const NavBar = React.createClass({
                 <Row>
                     <Col span="12" className="nav-logo">
                         <a href="/">
-                            <img src="public/images/nav-logo.png" />
+                            <img src="public/images/nav-logo.svg" />
                         </a>
                     </Col>
                     <Col span="12" className="nav-menu">
