@@ -1,1 +1,1 @@
-import 'antd/lib/index.css';
+import 'antd/dist/antd.css';
