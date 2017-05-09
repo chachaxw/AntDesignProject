@@ -8,17 +8,18 @@ import HomePortfolio from '../home/HomePortfolio';
 import HomeMore from '../home/HomeMore';
 
 export default class HomePage extends Component{
-    render() {
-        return (
-            <Layout>
-                <HomeBanner />
-                <HomeAbout />
-                <MoreInfo>
-                    <InfoContent />
-                </MoreInfo>
-                <HomePortfolio />
-                <HomeMore />
-            </Layout>
-        )
-    }
+
+  render() {
+    return (
+      <Layout>
+        <HomeBanner />
+        <HomeAbout />
+        <MoreInfo>
+          <InfoContent />
+        </MoreInfo>
+        <HomePortfolio />
+        <HomeMore />
+      </Layout>
+    )
+  }
 }
