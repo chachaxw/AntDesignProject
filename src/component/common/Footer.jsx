@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Row from 'antd/lib/row';
 import Col from 'antd/lib/col';
 import { Link } from 'react-router';
 import '../../../public/less/App.less';
 
-const SocialTips = React.createClass ({
+class SocialTips extends Component{
 
-    render: function() {
+    render() {
 
         const src = "public/images/qrcode.png";
 
@@ -24,11 +24,11 @@ const SocialTips = React.createClass ({
             </div>
         )
     }
-});
+}
 
-const Footer = React.createClass ({
+export default class Footer extends Component{
 
-    render: function() {
+    render() {
 
         return (
             <footer className="footer">
@@ -57,6 +57,4 @@ const Footer = React.createClass ({
             </footer>
         )
     }
-})
-
-export default Footer;
+}

@@ -1,10 +1,10 @@
-import React from "react";
+import React, { Component } from "react";
 import BannerImg from "../common/BannerImg";
 import Button from "../common/Button";
 
-const HomeAbout = React.createClass ({
+export default class HomeBanner extends Component{
 
-    render: function() {
+    render() {
         return (
             <BannerImg style={{backgroundImage: "url(public/images/banner-img.jpeg)"}}>
                 <div className="banner-logo">
@@ -20,6 +20,4 @@ const HomeAbout = React.createClass ({
             </BannerImg>
         )
     }
-})
-
-export default HomeAbout;
+}

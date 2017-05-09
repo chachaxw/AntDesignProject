@@ -1,9 +1,9 @@
-import React from "react";
+import React, { Component } from "react";
 import Button from '../common/Button';
 
-const InfoContent = React.createClass({
+export default class InfoContent extends Component{
 
-    render: function() {
+    render() {
         return (
             <div>
                 <p>
@@ -11,9 +11,7 @@ const InfoContent = React.createClass({
                     <br />
                     you can
                 </p>
-                <Button href="http://www.baidu.com">
-                    Get In Touch
-                </Button>
+                <Button href="http://www.baidu.com">Get In Touch</Button>
                 <p>
                     or go to
                     <a href="" target="_blank">About</a>
@@ -21,6 +19,4 @@ const InfoContent = React.createClass({
             </div>
         )
     }
-});
-
-export default InfoContent;
+}

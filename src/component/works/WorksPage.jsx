@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import NavBar from '../common/NavBar';
 
-class WorksPage extends React.Component {
+export default class WorksPage extends Component {
 
     render() {
         return (
@@ -12,5 +12,3 @@ class WorksPage extends React.Component {
         )
     }
 }
-
-export default WorksPage;

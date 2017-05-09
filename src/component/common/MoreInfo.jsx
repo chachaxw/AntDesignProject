@@ -1,14 +1,12 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const MoreInfo = React.createClass ({
+export default class MoreInfo extends Component{
 
-    render: function() {
+    render() {
         return (
             <div className="more-info" {...this.props}>
                 {this.props.children}
             </div>
         )
     }
-})
-
-export default MoreInfo;
+}

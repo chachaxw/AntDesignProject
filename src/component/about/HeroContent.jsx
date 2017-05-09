@@ -1,8 +1,9 @@
-import React from "react";
+import React, { Component } from 'react';
 import Button from "../common/Button";
 
-const HeroContent = React.createClass ({
-    render: function() {
+export default class HeroContent extends Component{
+
+    render() {
         return (
             <div className="hero-content">
                 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" className="svg-filters">
@@ -29,6 +30,4 @@ const HeroContent = React.createClass ({
             </div>
         )
     }
-})
-
-export default HeroContent;
+}

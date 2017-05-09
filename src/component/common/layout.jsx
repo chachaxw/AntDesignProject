@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import NavBar from '../common/NavBar';
 import Content from '../common/Content';
 import Footer from '../common/Footer';
 
-const Layout = React.createClass({
-    render: function() {
+export default class Layout extends Component{
+    render() {
         return (
             <div>
                 <NavBar />
@@ -15,5 +15,4 @@ const Layout = React.createClass({
             </div>
         )
     }
-});
-export default Layout;
+}

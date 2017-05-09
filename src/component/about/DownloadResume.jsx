@@ -1,9 +1,9 @@
-import React from "react";
+import React, { Component } from 'react';
 import MoreInfo from "../common/MoreInfo";
 import Button from "../common/Button";
 
-const DownloadResume = React.createClass({
-    render: function() {
+export default class DownloadResume extends Component{
+    render() {
         return (
             <MoreInfo>
                 <div className="download-info">
@@ -19,6 +19,4 @@ const DownloadResume = React.createClass({
         )
     }
 
-});
-
-export default DownloadResume;
+}

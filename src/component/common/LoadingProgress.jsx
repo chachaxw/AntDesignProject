@@ -1,23 +1,24 @@
-import { Progress } from 'antd';
-import React from 'react';
+import React, { Component } from 'react';
 import '../../../public/less/App.less';
 
 const ProgressCircle = Progress.Circle;
 
-const LoadingProgress = React.createClass({
-    getInitialState: function() {
-        return {percent: 0};
-    },
+export default class LoadingProgress extends Component{
+    state = {
+        percent: 0
+    }
 
-    loading: function() {
-        this.setState({percent: this.state.percent + 1});
-    },
+    loading() {
+        this.setState({
+            percent: this.state.percent + 1
+        });
+    }
 
-    componentDidMount: function() {
+    componentDidMount() {
         this.interval = setInterval(this.loading, 60);
-    },
+    }
 
-    render: function() {
+    render() {
 
         if( this.state.percent > 100 ) {
             clearInterval(this.interval);
@@ -29,6 +30,4 @@ const LoadingProgress = React.createClass({
         }
 
     }
-})
-
-export default LoadingProgress;
+}

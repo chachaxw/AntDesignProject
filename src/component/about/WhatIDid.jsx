@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const WhatIDid = React.createClass({
-  render: function() {
+export default class WhatIDid extends Component{
+  
+  render() {
     return (
       <div className="what-i-did">
         <div className="what-title">
@@ -13,6 +14,4 @@ const WhatIDid = React.createClass({
       </div>
     )
   }
-});
-
-export default WhatIDid;
+}

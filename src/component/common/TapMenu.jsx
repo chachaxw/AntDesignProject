@@ -1,43 +1,35 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Row from 'antd/lib/row';
 import Col from 'antd/lib/col';
 import { Link } from 'react-router';
 
-const TapMenu = React.createClass({
+export default class TapMenu extends Component{
 
-    getInitialState: function() {
-        return {
-            toggle: false,
-            height: "0",
-            icon: "iconfont icon-menu"
-        }
-    },
+    state = {
+        toggle: false,
+        height: "0",
+        icon: "iconfont icon-menu"
+    }
 
-    handleClick: function() {
-
-        // console.log(this.state);
-
+    handleClick() {
         const isToggled = this.state.toggle;
 
-        if ( !isToggled )
-            this.setState(
-                {
-                    toggle: true,
-                    height: "166px",
-                    icon: "iconfont icon-close"
-                }
-            )
-        else
-            this.setState(
-                {
-                    toggle: false,
-                    height: "0",
-                    icon: "iconfont icon-menu"
-                }
-            )
-    },
+        if ( !isToggled ) {
+            this.setState({
+                toggle: true,
+                height: "166px",
+                icon: "iconfont icon-close"
+            })
+        }else {
+            this.setState({
+                toggle: false,
+                height: "0",
+                icon: "iconfont icon-menu"
+            })
+        }
+    }
 
-    render: function() {
+    render() {
         return (
             <div className="tap-menu">
                 <Col span="12" className="nav-logo">
@@ -63,6 +55,4 @@ const TapMenu = React.createClass({
             </div>
         )
     }
-});
-
-export default TapMenu;
+}

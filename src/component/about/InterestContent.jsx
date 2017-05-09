@@ -1,17 +1,17 @@
-import React from 'react';
+import React, { Component } from 'react';
 import MoreInfo from '../common/MoreInfo';
 import Row from 'antd/lib/row';
 import Col from 'antd/lib/col';
 import ResponsiveMixin from 'react-responsive-mixin';
 
-const Interests = React.createClass({
-    mixins: [ResponsiveMixin],
+class Interests extends Component{
+    mixins: [ResponsiveMixin]
 
-    getInitialState: function() {
-        return {span: "6"}
-    },
+    state = {
+        span: "6"
+    }
 
-    componentDidMount: function(){
+    componentDidMount() {
         this.media({minWidth: 769}, function() {
             this.setState({span: "6"});
         }.bind(this));
@@ -21,9 +21,9 @@ const Interests = React.createClass({
         this.media({minWidth: 320, maxWidth: 420}, function() {
             this.setState({span: "24"});
         }.bind(this));
-    },
+    }
 
-    render: function() {
+    render() {
         return (
             <div className="interest-list">
                 <Row>
@@ -47,23 +47,23 @@ const Interests = React.createClass({
             </div>
         )
     }
-})
+}
 
-const InterestContent = React.createClass({
-    render: function() {
+export default class InterestContent extends Component{
+
+    render() {
         return (
             <div className="my-interest">
                 <MoreInfo>
                     <h1>Interests</h1>
                     <p>
-                        I have a lot of interests in my life, for instance, photography, cycling, listening music,
-    read aticles, and so on. And I also like playing the guitar, if you want to ask me about the guitar, you can get in touch me!
+                        I have a lot of interests in my life, for instance, photography, cycling,
+                        listening music,read aticles, and so on. And I also like playing the guitar,
+                        if you want to ask me about the guitar, you can get in touch me!
                     </p>
                 </MoreInfo>
                 <Interests />
             </div>
         )
     }
-});
-
-export default InterestContent;
+}

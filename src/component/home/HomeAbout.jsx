@@ -1,8 +1,8 @@
-import React from "react";
+import React, { Component } from 'react';
 
-const HomeAbout = React.createClass ({
+export default class HomeAbout extends Component{
 
-    render: function() {
+    render() {
         return (
             <div className="home-about">
                 <span className="about-user-head">
@@ -18,6 +18,4 @@ const HomeAbout = React.createClass ({
             </div>
         )
     }
-})
-
-export default HomeAbout;
+}

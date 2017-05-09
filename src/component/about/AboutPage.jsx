@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import NavBar from '../common/NavBar';
 import Content from '../common/Content';
 import HeroImg from '../common/HeroImg';
@@ -10,8 +10,8 @@ import MoreInfo from '../common/MoreInfo';
 import WhatIDid from './WhatIDid';
 import Footer from '../common/Footer';
 
-const AboutPage = React.createClass({
-    render: function() {
+export default class AboutPage extends Component{
+    render() {
         return (
             <div>
                 <HeroImg style={{backgroundImage: "url(public/images/hero-img.png)"}}/>
@@ -30,6 +30,4 @@ const AboutPage = React.createClass({
             </div>
         )
     }
-});
-
-export default AboutPage;
+}

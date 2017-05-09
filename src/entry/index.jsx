@@ -1,15 +1,18 @@
 import '../lib/lib';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { createBrowserHistory } from 'history';
+import { Router, Route, IndexRoute } from 'react-router';
+
 import HomePage from '../component/home/HomePage';
 import AboutPage from '../component/about/AboutPage';
 import WorksPage from '../component/works/WorksPage';
-import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
-const mountNode = document.getElementById('react-content');
+const mountNode = document.getElementById('app');
+const customHistory = createBrowserHistory()
 
 const routes = (
-    <Router history={browserHistory}>
+    <Router history={customHistory}>
         <Route path="/">
             <IndexRoute component={HomePage}></IndexRoute>
             <Route name="about" path="about" component={AboutPage}></Route>
