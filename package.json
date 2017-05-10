@@ -18,7 +18,7 @@
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-redux": "^5.0.4",
-    "react-responsive-mixin": "^0.4.0",
+    "react-responsive-component": "^1.0.7",
     "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1",
     "redux": "^3.6.0"

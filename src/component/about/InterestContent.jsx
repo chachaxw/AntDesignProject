@@ -2,49 +2,74 @@ import React, { Component } from 'react';
 import MoreInfo from '../common/MoreInfo';
 import Row from 'antd/lib/row';
 import Col from 'antd/lib/col';
-import ResponsiveMixin from 'react-responsive-mixin';
+import { ResponsiveComponent } from 'react-responsive-component';
 
 class Interests extends Component{
-  mixins: [ResponsiveMixin]
-
-  state = {
-    span: '6'
-  }
-
-  componentDidMount() {
-    this.media({minWidth: 769}, () => {
-      this.setState({span: '6'});
-    });
-    this.media({minWidth: 420, maxWidth: 768}, () => {
-      this.setState({span: '12'});
-    });
-    this.media({minWidth: 320, maxWidth: 420}, () => {
-      this.setState({span: '24'});
-    });
-  }
 
   render() {
     return (
-      <div className="interest-list">
-        <Row>
-          <Col span={this.state.span} style={{backgroundColor: 'rgba(0,0,0,0.5)',padding: '40px'}}>
-            <span><i className="iconfont icon-camera"></i></span>
-            <p>Photography</p>
-          </Col>
-          <Col span={this.state.span} style={{backgroundColor: 'rgba(0,0,0,0.65)',padding: '40px'}}>
-            <span><i className="iconfont icon-bike"></i></span>
-            <p>Cycling</p>
-          </Col>
-          <Col span={this.state.span} style={{backgroundColor: 'rgba(0,0,0,0.8)',padding: '40px'}}>
-            <span><i className="iconfont icon-music"></i></span>
-            <p>Music</p>
-          </Col>
-          <Col span={this.state.span} style={{backgroundColor: 'rgba(0,0,0,0.9)',padding: '40px'}}>
-            <span><i className="iconfont icon-book"></i></span>
-            <p>Reading</p>
-          </Col>
-        </Row>
-      </div>
+        <div className="interest-list">
+          <ResponsiveComponent query='(min-width: 320px) and (max-width: 768px)'>
+            <Row>
+              <Col span='24' style={{backgroundColor: 'rgba(0,0,0,0.5)',padding: '40px'}}>
+                <span><i className="iconfont icon-camera"></i></span>
+                <p>Photography</p>
+              </Col>
+              <Col span='24' style={{backgroundColor: 'rgba(0,0,0,0.65)',padding: '40px'}}>
+                <span><i className="iconfont icon-bike"></i></span>
+                <p>Cycling</p>
+              </Col>
+              <Col span='24' style={{backgroundColor: 'rgba(0,0,0,0.8)',padding: '40px'}}>
+                <span><i className="iconfont icon-music"></i></span>
+                <p>Music</p>
+              </Col>
+              <Col span='24' style={{backgroundColor: 'rgba(0,0,0,0.9)',padding: '40px'}}>
+                <span><i className="iconfont icon-book"></i></span>
+                <p>Reading</p>
+              </Col>
+            </Row>
+          </ResponsiveComponent>
+          <ResponsiveComponent query='(min-width: 769px) and (max-width: 1279px)'>
+            <Row>
+              <Col span='12' style={{backgroundColor: 'rgba(0,0,0,0.5)',padding: '40px'}}>
+                <span><i className="iconfont icon-camera"></i></span>
+                <p>Photography</p>
+              </Col>
+              <Col span='12' style={{backgroundColor: 'rgba(0,0,0,0.65)',padding: '40px'}}>
+                <span><i className="iconfont icon-bike"></i></span>
+                <p>Cycling</p>
+              </Col>
+              <Col span='12' style={{backgroundColor: 'rgba(0,0,0,0.8)',padding: '40px'}}>
+                <span><i className="iconfont icon-music"></i></span>
+                <p>Music</p>
+              </Col>
+              <Col span='12' style={{backgroundColor: 'rgba(0,0,0,0.9)',padding: '40px'}}>
+                <span><i className="iconfont icon-book"></i></span>
+                <p>Reading</p>
+              </Col>
+            </Row>
+          </ResponsiveComponent>
+          <ResponsiveComponent query='only query and (min-width: 1280px)'>
+            <Row>
+              <Col span='6' style={{backgroundColor: 'rgba(0,0,0,0.5)',padding: '40px'}}>
+                <span><i className="iconfont icon-camera"></i></span>
+                <p>Photography</p>
+              </Col>
+              <Col span='6' style={{backgroundColor: 'rgba(0,0,0,0.65)',padding: '40px'}}>
+                <span><i className="iconfont icon-bike"></i></span>
+                <p>Cycling</p>
+              </Col>
+              <Col span='6' style={{backgroundColor: 'rgba(0,0,0,0.8)',padding: '40px'}}>
+                <span><i className="iconfont icon-music"></i></span>
+                <p>Music</p>
+              </Col>
+              <Col span='6' style={{backgroundColor: 'rgba(0,0,0,0.9)',padding: '40px'}}>
+                <span><i className="iconfont icon-book"></i></span>
+                <p>Reading</p>
+              </Col>
+            </Row>
+          </ResponsiveComponent>
+        </div>
     )
   }
 }

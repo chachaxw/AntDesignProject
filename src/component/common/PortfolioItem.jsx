@@ -1,41 +1,54 @@
 import React, { Component } from 'react';
 import Row from 'antd/lib/row';
 import Col from 'antd/lib/col';
-import ResponsiveMixin from 'react-responsive-mixin';
+import { ResponsiveComponent } from 'react-responsive-component';
 
 class ListItemWrapper extends Component{
-  mixins: [ResponsiveMixin]
-
-  state = {
-    span: '6'
-  }
-
-  componentDidMount() {
-    this.media({minWidth: 1280}, () => {
-      this.setState({span: '6'});
-    });
-    this.media({minWidth: 769, maxWidth: 1279}, () => {
-      this.setState({span: '12'});
-    });
-    this.media({minWidth: 320, maxWidth: 768}, () => {
-      this.setState({span: '24'});
-    });
-  }
 
   render() {
 
     return (
-      <Col span={this.state.span}>
-        <div className="portfolio-item">
-          <div className="portfolio-img">
-            <img src={this.props.data.src}/>
-          </div>
-          <div className="portfolio-desc">
-            <h2>{this.props.data.title}</h2>
-            <p>{this.props.data.desc}</p>
-          </div>
-        </div>
-      </Col>
+      <div>
+        <ResponsiveComponent query='(min-width: 320px) and (max-width: 768px)'>
+          <Col span='24'>
+            <div className="portfolio-item">
+              <div className="portfolio-img">
+                <img src={this.props.data.src}/>
+              </div>
+              <div className="portfolio-desc">
+                <h2>{this.props.data.title}</h2>
+                <p>{this.props.data.desc}</p>
+              </div>
+            </div>
+          </Col>
+        </ResponsiveComponent>
+        <ResponsiveComponent query='(min-width: 769px) and (max-width: 1279px)'>
+          <Col span='12'>
+            <div className="portfolio-item">
+              <div className="portfolio-img">
+                <img src={this.props.data.src}/>
+              </div>
+              <div className="portfolio-desc">
+                <h2>{this.props.data.title}</h2>
+                <p>{this.props.data.desc}</p>
+              </div>
+            </div>
+          </Col>
+        </ResponsiveComponent>
+        <ResponsiveComponent query='(min-width: 1280px)'>
+          <Col span='6'>
+            <div className="portfolio-item">
+              <div className="portfolio-img">
+                <img src={this.props.data.src}/>
+              </div>
+              <div className="portfolio-desc">
+                <h2>{this.props.data.title}</h2>
+                <p>{this.props.data.desc}</p>
+              </div>
+            </div>
+          </Col>
+        </ResponsiveComponent>
+      </div>
     )
   }
 }
@@ -70,7 +83,7 @@ export default class PortfolioItem extends Component{
   render() {
 
     return (
-      <Row ref="list">
+      <Row ref="list" style={{maxWidth: '1280px', margin: '0 auto'}}>
         {this.state.items.map( item => (
             <ListItemWrapper key={item.id} data={item} />
           )

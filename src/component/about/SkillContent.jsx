@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Row from 'antd/lib/row';
 import Col from 'antd/lib/col';
 import Progress from 'antd/lib/progress';
-import ResponsiveMixin from 'react-responsive-mixin';
+import { ResponsiveComponent } from 'react-responsive-component';
 
 const ProgressLine = Progress.Line;
 
@@ -19,9 +19,6 @@ class ListItem extends Component{
 }
 
 export default class SkillContent extends Component{
-
-  mixins: [ResponsiveMixin]
-
   state = {
     items: [
       {
@@ -59,46 +56,54 @@ export default class SkillContent extends Component{
         skill: '<sketch/>',
         percent: 80
       }
-    ],
-    spanLeft: '8',
-    spanRight: '16'
-  }
-
-  componentDidMount() {
-    this.onMount(() => {
-      this.setState(() => {
-        this.media({minWidth: 861}, () => {
-          this.setState({spanLeft: '8', spanRight: '16'});
-        });
-        this.media({minWidth: 320, maxWidth: 860}, () => {
-          this.setState({spanLeft: '24', spanRight: '24'});
-        });
-      })
-    })
+    ]
   }
 
   render() {
     return (
       <div className="my-skill">
-        <Row>
-          <Col span={this.state.spanLeft}>
-            <div className="my-title-img">
-              <p>A Full Inspiration Front-end Developer & UI Designer</p>
-            </div>
-          </Col>
-          <Col span={this.state.spanRight}>
-            <div className="my-skill-list">
-              <h2>Skills</h2>
-              <div className="skill-list-item">
-                <ul>
-                  {this.state.items.map(item => (
-                    <ListItem key={item.id} data={item} />
-                  ))}
-                </ul>
+        <ResponsiveComponent query='(min-width: 320px) and (max-width: 860px)'>
+          <Row>
+            <Col span='24'>
+              <div className="my-title-img">
+                <p>A Full Inspiration Front-end Developer & UI Designer</p>
               </div>
-            </div>
-          </Col>
-        </Row>
+            </Col>
+            <Col span='24'>
+              <div className="my-skill-list">
+                <h2>Skills</h2>
+                <div className="skill-list-item">
+                  <ul>
+                    {this.state.items.map(item => (
+                      <ListItem key={item.id} data={item} />
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </Col>
+          </Row>
+        </ResponsiveComponent>
+        <ResponsiveComponent query='only query and (min-width: 861px)'>
+          <Row>
+            <Col span='8'>
+              <div className="my-title-img">
+                <p>A Full Inspiration Front-end Developer & UI Designer</p>
+              </div>
+            </Col>
+            <Col span='16'>
+              <div className="my-skill-list">
+                <h2>Skills</h2>
+                <div className="skill-list-item">
+                  <ul>
+                    {this.state.items.map(item => (
+                      <ListItem key={item.id} data={item} />
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </Col>
+          </Row>
+        </ResponsiveComponent>
       </div>
     )
   }
