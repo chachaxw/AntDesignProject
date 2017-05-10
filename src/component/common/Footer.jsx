@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import Row from 'antd/lib/row';
 import Col from 'antd/lib/col';
-import { Link } from 'react-router';
-import '../../../public/less/App.less';
+import { Link } from 'react-router-dom';
 
 class SocialTips extends Component{
 
   render() {
 
-    const src = "public/images/qrcode.png";
+    const src = 'public/images/qrcode.png';
 
     return (
       <div className="tips-box">

@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
-import Row from 'antd/lib/row';
 import Col from 'antd/lib/col';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
 export default class TapMenu extends Component{
 
   state = {
     toggle: false,
-    height: "0",
-    icon: "iconfont icon-menu"
+    height: '0',
+    icon: 'iconfont icon-menu'
   }
 
   handleClick() {
@@ -17,14 +16,14 @@ export default class TapMenu extends Component{
     if ( !isToggled ) {
       this.setState({
         toggle: true,
-        height: "166px",
-        icon: "iconfont icon-close"
+        height: '166px',
+        icon: 'iconfont icon-close'
       })
     }else {
       this.setState({
         toggle: false,
-        height: "0",
-        icon: "iconfont icon-menu"
+        height: '0',
+        icon: 'iconfont icon-menu'
       })
     }
   }
@@ -33,7 +32,7 @@ export default class TapMenu extends Component{
     return (
       <div className="tap-menu">
         <Col span="12" className="nav-logo">
-          <a href="">
+          <a href="/">
             <img src="public/images/nav-logo.png" alt="" />
           </a>
         </Col>

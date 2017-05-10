@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Progress } from 'antd';
-import '../../../public/less/App.less';
 
 const ProgressCircle = Progress.Circle;
 

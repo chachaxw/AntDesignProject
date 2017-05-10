@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Row from 'antd/lib/row';
 import Col from 'antd/lib/col';
 import Progress from 'antd/lib/progress';
-import ResponsiveMixin from "react-responsive-mixin";
+import ResponsiveMixin from 'react-responsive-mixin';
 
 const ProgressLine = Progress.Line;
 
@@ -25,53 +25,53 @@ export default class SkillContent extends Component{
   state = {
     items: [
       {
-        id: "1",
-        skill: "<html/>",
+        id: 1,
+        skill: '<html/>',
         percent: 85
       },
       {
-        id: "2",
-        skill: "<css/>",
+        id: '2',
+        skill: '<css/>',
         percent: 80
       },
       {
-        id: "3",
-        skill: "<javascript/>",
+        id: '3',
+        skill: '<javascript/>',
         percent: 75
       },
       {
-        id: "4",
-        skill: "<php/>",
+        id: '4',
+        skill: '<php/>',
         percent: 50
       },
       {
-        id: "5",
-        skill: "<nodejs/>",
+        id: '5',
+        skill: '<nodejs/>',
         percent: 60
       },
       {
-        id: "6",
-        skill: "<photoshop/>",
+        id: '6',
+        skill: '<photoshop/>',
         percent: 80
       },
       {
-        id: "7",
-        skill: "<sketch/>",
+        id: '7',
+        skill: '<sketch/>',
         percent: 80
       }
     ],
-    spanLeft: "8",
-    spanRight: "16"
+    spanLeft: '8',
+    spanRight: '16'
   }
 
   componentDidMount() {
     this.onMount(() => {
       this.setState(() => {
         this.media({minWidth: 861}, () => {
-          this.setState({spanLeft: "8", spanRight: "16"});
+          this.setState({spanLeft: '8', spanRight: '16'});
         });
         this.media({minWidth: 320, maxWidth: 860}, () => {
-          this.setState({spanLeft: "24", spanRight: "24"});
+          this.setState({spanLeft: '24', spanRight: '24'});
         });
       })
     })

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Row from 'antd/lib/row';
 import Col from 'antd/lib/col';
-import '../../../public/less/App.less';
+import { Link } from 'react-router-dom';
+
 import TapMenu from './TapMenu';
-import { Link } from 'react-router';
 
 export default class NavBar extends Component{
 
@@ -12,19 +12,13 @@ export default class NavBar extends Component{
       <nav className="nav-bar">
         <Row>
           <Col span="12" className="nav-logo">
-            <a href="/">
-              <img src="public/images/nav-logo.svg" />
-            </a>
+            <a href="/"><img src="public/images/nav-logo.svg" /></a>
           </Col>
           <Col span="12" className="nav-menu">
             <ul>
               <li><a href="/" className="nav-active">Home</a></li>
-              <li>
-                <Link to="works">Works</Link>
-              </li>
-              <li>
-                <Link to="about">About</Link>
-              </li>
+              <li><Link to="works">Works</Link></li>
+              <li><Link to="about">About</Link></li>
               <li><a href="http://github.com/chachaxw" target="_blank" rel="noopener noreferrer">Github</a></li>
             </ul>
           </Col>

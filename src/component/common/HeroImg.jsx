@@ -4,7 +4,7 @@ export default class HeroImg extends Component{
 
   render() {
     return (
-      <div className="hero-img-box" {...this.props}>
+      <div className='hero-img-box' {...this.props}>
         {this.props.children}
       </div>
     )

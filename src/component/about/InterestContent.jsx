@@ -8,18 +8,18 @@ class Interests extends Component{
   mixins: [ResponsiveMixin]
 
   state = {
-    span: "6"
+    span: '6'
   }
 
   componentDidMount() {
     this.media({minWidth: 769}, () => {
-      this.setState({span: "6"});
+      this.setState({span: '6'});
     });
     this.media({minWidth: 420, maxWidth: 768}, () => {
-      this.setState({span: "12"});
+      this.setState({span: '12'});
     });
     this.media({minWidth: 320, maxWidth: 420}, () => {
-      this.setState({span: "24"});
+      this.setState({span: '24'});
     });
   }
 
@@ -27,19 +27,19 @@ class Interests extends Component{
     return (
       <div className="interest-list">
         <Row>
-          <Col span={this.state.span} style={{backgroundColor: "rgba(0,0,0,0.5)",padding: "40px"}}>
+          <Col span={this.state.span} style={{backgroundColor: 'rgba(0,0,0,0.5)',padding: '40px'}}>
             <span><i className="iconfont icon-camera"></i></span>
             <p>Photography</p>
           </Col>
-          <Col span={this.state.span} style={{backgroundColor: "rgba(0,0,0,0.65)",padding: "40px"}}>
+          <Col span={this.state.span} style={{backgroundColor: 'rgba(0,0,0,0.65)',padding: '40px'}}>
             <span><i className="iconfont icon-bike"></i></span>
             <p>Cycling</p>
           </Col>
-          <Col span={this.state.span} style={{backgroundColor: "rgba(0,0,0,0.8)",padding: "40px"}}>
+          <Col span={this.state.span} style={{backgroundColor: 'rgba(0,0,0,0.8)',padding: '40px'}}>
             <span><i className="iconfont icon-music"></i></span>
             <p>Music</p>
           </Col>
-          <Col span={this.state.span} style={{backgroundColor: "rgba(0,0,0,0.9)",padding: "40px"}}>
+          <Col span={this.state.span} style={{backgroundColor: 'rgba(0,0,0,0.9)',padding: '40px'}}>
             <span><i className="iconfont icon-book"></i></span>
             <p>Reading</p>
           </Col>

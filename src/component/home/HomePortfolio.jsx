@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import Row from 'antd/lib/row';
 import Col from 'antd/lib/col';
-import PortfolioItem from "../common/PortfolioItem";
+import PortfolioItem from '../common/PortfolioItem';
 
 export default class HomePortfolio extends Component {
 

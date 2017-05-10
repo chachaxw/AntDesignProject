@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from 'react';
 import Layout from '../common/Layout';
 import HomeBanner from '../home/HomeBanner';
 import HomeAbout from '../home/HomeAbout';

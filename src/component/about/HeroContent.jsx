@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Button from "../common/Button";
+import Button from '../common/Button';
 
 export default class HeroContent extends Component{
 

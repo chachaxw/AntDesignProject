@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import MoreInfo from "../common/MoreInfo";
-import Button from "../common/Button";
+import MoreInfo from '../common/MoreInfo';
+import Button from '../common/Button';
 
 export default class DownloadResume extends Component{
 
