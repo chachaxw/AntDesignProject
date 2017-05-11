@@ -9,7 +9,7 @@ body {
 @font-color-E8: #E8E8E8;
 @font-color-81: #818181;;
 @bg-color-34: #343434;
-@bg-color-F2: #F2F2F2;
+@bg-color-F5: #F5F5F5;
 @bg-color-blue: #c2def2;
 @bg-color-6F: #3B516F;
 @theme-color-blue: #1573C6;
@@ -196,7 +196,7 @@ p {
     height: auto;
     padding-bottom: 80px;
     overflow: hidden;
-    background: @bg-color-F2;
+    background: @bg-color-F5;
     h1 {
         margin: 50px auto 0;
         text-align: center;
@@ -211,11 +211,12 @@ p {
         height: 410px;
         max-width: 300px;
         min-width: 250px;
-        -webkit-transition: all .3s cubic-bezier(.68,-0.55,.27,1.55);
-        -moz-transition: all .3s cubic-bezier(.68,-0.55,.27,1.55);
-        transition: all .3s cubic-bezier(.68,-0.55,.27,1.55);
+        box-shadow: 0 10px 60px rgba(52,52,52,0.15);
+        -webkit-transition: all .5s cubic-bezier(.68,-0.55,.27,1.55);
+        -moz-transition: all .5s cubic-bezier(.68,-0.55,.27,1.55);
+        transition: all .5s cubic-bezier(.68,-0.55,.27,1.55);
         &:hover {
-            box-shadow: 0 5px 35px rgba(52,52,52,0.5);
+            box-shadow: 0 10px 100px rgba(52,52,52,0.3);
         }
         .portfolio-img {
             width: 100%;
@@ -550,8 +551,11 @@ p {
 /* 关于页面下载我的简历样式 */
 .what-i-did {
     .what-title {
+        display: flex;
         height: 200px;
         text-align: center;
+        align-items: center;
+        justify-content: center;
         background-color: @font-color-E8;
         h1 {
             font-size: 36px;

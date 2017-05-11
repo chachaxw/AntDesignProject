@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createBrowserHistory } from 'history';
+import { createHashHistory } from 'history';
 import { Router, Route, Switch } from 'react-router';
 
 import '../lib/lib';
@@ -10,14 +10,14 @@ import AboutPage from '../component/about/AboutPage';
 import WorksPage from '../component/works/WorksPage';
 
 const mountNode = document.getElementById('app');
-const customHistory = createBrowserHistory();
+const customHistory = createHashHistory();
 
 const routes = (
   <Router history={customHistory}>
     <Switch>
-      <Route name="/" component={HomePage} />
-      <Route name="about" path="about" component={AboutPage} />
-      <Route name="works" path="works" component={WorksPage} />
+      <Route exact path="/" component={HomePage} />
+      <Route name="about" path="/about" component={AboutPage} />
+      <Route name="works" path="/works" component={WorksPage} />
     </Switch>
   </Router>
 );
