@@ -9,7 +9,7 @@ class ListItemWrapper extends Component{
 
     return (
       <div>
-        <ResponsiveComponent query='(min-width: 320px) and (max-width: 768px)'>
+        <ResponsiveComponent query='(min-width: 320px) and (max-width: 767px)'>
           <Col span='24'>
             <div className="portfolio-item">
               <div className="portfolio-img">
@@ -22,7 +22,7 @@ class ListItemWrapper extends Component{
             </div>
           </Col>
         </ResponsiveComponent>
-        <ResponsiveComponent query='(min-width: 769px) and (max-width: 1279px)'>
+        <ResponsiveComponent query='(min-width: 768px) and (max-width: 1279px)'>
           <Col span='12'>
             <div className="portfolio-item">
               <div className="portfolio-img">

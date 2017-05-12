@@ -49,7 +49,7 @@ class Interests extends Component{
               </Col>
             </Row>
           </ResponsiveComponent>
-          <ResponsiveComponent query='only query and (min-width: 1280px)'>
+          <ResponsiveComponent query='(min-width: 1280px)'>
             <Row>
               <Col span='6' style={{backgroundColor: 'rgba(0,0,0,0.5)',padding: '40px'}}>
                 <span><i className="iconfont icon-camera"></i></span>

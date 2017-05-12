@@ -83,7 +83,7 @@ export default class SkillContent extends Component{
             </Col>
           </Row>
         </ResponsiveComponent>
-        <ResponsiveComponent query='only query and (min-width: 861px)'>
+        <ResponsiveComponent query='(min-width: 861px)'>
           <Row>
             <Col span='8'>
               <div className="my-title-img">

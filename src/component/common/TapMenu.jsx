@@ -10,7 +10,7 @@ export default class TapMenu extends Component{
     icon: 'iconfont icon-menu'
   }
 
-  handleClick() {
+  handleClick = () => {
     const isToggled = this.state.toggle;
 
     if ( !isToggled ) {
@@ -33,7 +33,7 @@ export default class TapMenu extends Component{
       <div className="tap-menu">
         <Col span="12" className="nav-logo">
           <a href="/">
-            <img src="public/images/nav-logo.png" alt="" />
+            <img src="public/images/nav-logo.svg" alt="" />
           </a>
         </Col>
         <span className="tap-menu-button">

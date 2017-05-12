@@ -12,7 +12,7 @@ export default class NavBar extends Component{
       <nav className="nav-bar">
         <Row>
           <Col span="12" className="nav-logo">
-            <a href="/"><img src="public/images/nav-logo.svg" /></a>
+            <a href="/"><img src="public/images/nav-logo.svg" alt="logo" /></a>
           </Col>
           <Col span="12" className="nav-menu">
             <ul>
